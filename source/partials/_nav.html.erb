@@ -1,0 +1,15 @@
+<div class="navbar-header">
+  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a href="../" class="navbar-brand">Brand</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="/about" class="<%= 'active' if current_page.path =~ /^about/ %>">About</a></li>
+    <li><a href="#">Page 2</a></li>
+  </ul>
+</nav>

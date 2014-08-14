@@ -47,6 +47,12 @@
 #   end
 # end
 
+helpers do
+  def nav_active(page)
+    @page_id == page ? {:class => "active"} : {}
+  end
+end
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

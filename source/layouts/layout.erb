@@ -10,24 +10,36 @@
     <title><%= current_page.data.title || "The Middleman" %></title>
 
     <!-- Latest compiled and minified Bootstrap CSS -->
-    <%= stylesheet_link_tag 'bootstrap3' %>
+    <%= stylesheet_link_tag 'application' %>
 
-    <%# stylesheet_link_tag "normalize", "all" %>
-    <%# javascript_include_tag  "all" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <div class="container-fluid">
-      <header class="navbar navbar-static-top bs-docs-nav" role="banner">
-        <%= partial 'partials/nav-main' %>
-      </header>
-      <section role="main">
-        <%= yield %>
-      </section>
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <%= partial 'partials/nav' %>
+        </div>
+      </nav>
+
+      <%= yield %>
+
       <footer>
-        Footer
+        <div class="container">
+          <%= partial 'partials/footer' %>
+        </div>
       </footer>
+
     </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/flo7wlq.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <%= javascript_include_tag  'public' %>
 
   </body>
 </html>

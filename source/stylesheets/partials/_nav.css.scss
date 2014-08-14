@@ -1,0 +1,32 @@
+.navbar {
+  margin-bottom: 0;
+  padding: 10px 20px;
+  background: $white;
+  border: none;
+  @include box-shadow($drop-shadow);
+
+
+}
+
+.navbar-default {
+  .navbar-nav > li > a {
+    border-left: 1px solid $borderColor;
+    font-size: 1.1em;
+    letter-spacing: .1em;
+
+    font-family: $navFontFamily;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &.active {
+      color: $black;
+    }
+  }
+}
+
+.navbar-brand {
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 700;
+}

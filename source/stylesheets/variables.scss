@@ -1,0 +1,98 @@
+// Variables & Setup
+// **************************************************
+// **************************************************
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+// Background
+$backgroundColor:                  #FFF;
+
+// Grays
+$black:                            #2b2b2b;
+$grayDarker:                       #4c4c4c;
+$grayDark:                         #5d5d5d;
+$gray:                             #555;
+$grayLight:                        #999;
+$grayLighter:                      #eee;
+$white:                            #fff;
+$offwhite:                         #f4eecc;
+
+// Accent colors
+$blue:                             #049cdb;
+$blueDark:                         #0064cd;
+$greenDark:                        #394121;
+$greenMed:                         #536222;
+$green:                            #7a8448;
+$greenLight:                       #bec38b;
+$greenBright:                      #d4ff61;
+$red:                              #9d261d;
+$yellow:                           #ffc40d;
+$orangeDark:                       #a14f1f;
+$orange:                           #d95c12;
+$brown:                            #1e1710;
+$purple:                           #7a43b6;
+
+// Links
+$linkColor:                        $orangeDark;
+$linkColorHover:                   darken($linkColor, 15%);
+
+// Typography
+$baseFontSize:                     16px;
+$baseFontFamily:                   "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headlineFontFamily:               "kepler-std-extended-subhead",serif;
+$navFontFamily:                    "ff-dax-web-pro-condensed",sans-serif;
+$baseLineHeight:                   20px;
+$textColor:                        $greenDark;
+$headlineTextColor:                $greenBright;
+
+// Buttons
+$primaryButtonBackground:          $linkColor;
+
+//Borders
+$borderColor:                      #e8e8e8;
+
+// Text Shadows
+$text-shadow-light:               (rgba(255,255,255,.9) 0 1px 0);
+$text-shadow-dark:                (rgba(0,0,0,.3) 0 1px 0);
+
+// Drop Shadows
+$drop-shadow:                     (0 1px 8px rgba(0, 0, 0, 0.5));
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Input placeholder text color
+$placeholderText:                 $grayLight;
+
+// HR border color
+$hrBorder:                        $grayLighter;
+
+// Navbar
+$navbarHeight:                    86px;
+$navbarBackground:                $grayDarker;
+$navbarBackgroundHighlight:       $grayDark;
+$navbarLinkBackgroundHover:       transparent;
+
+$navbarText:                      $white;
+$navbarLinkColor:                 $white;
+$navbarLinkColorHover:            $white;
+
+// Form states and alerts
+$warningText:                     #c09853;
+$warningBackground:               #fcf8e3;
+$warningBorder:                   darken(adjust-hue($warningBackground, -10), 3%);
+
+$errorText:                       #b94a48;
+$errorBackground:                 #f2dede;
+$errorBorder:                     darken(adjust-hue($errorBackground, -10), 3%);
+
+$successText:                     #468847;
+$successBackground:               #dff0d8;
+$successBorder:                   darken(adjust-hue($successBackground, -10), 5%);
+
+$infoText:                        #3a87ad;
+$infoBackground:                  #d9edf7;
+$infoBorder:                      darken(adjust-hue($infoBackground, -10), 7%);
