@@ -56,8 +56,9 @@
     }
 
     .header-text {
-      margin: -10px 0 10px 0;
+      margin-top: -10px;
       padding: 20px;
+      //background: url('/images/bg-diagonal.gif') repeat;
       position: relative;
       text-align: center;
 
@@ -81,6 +82,29 @@
         color: $gray;
       }
 
+    }
+
+    .content {
+      img {
+        margin-bottom: 6px;
+        //padding-bottom: 40px;
+        //border-bottom: 1px solid $gray-lighter;
+      }
+      .caption {
+        margin-bottom: 32px;
+        //margin: -31px auto 20px auto;
+        padding: 10px 70px 10px 20px;
+        display: inline-block;
+        //background: $gray-lighter;
+        border-left: 2px solid $grayLighter;
+        //border-right: 1px solid $gray-lighter;
+        //background: $white;
+        background: url('/images/bg-diagonal-4.gif') bottom right no-repeat ;
+        color: $grayLight;
+        font-style: italic;
+        //border-bottom: none;
+        //text-align: center;
+      }
     }
   }
 

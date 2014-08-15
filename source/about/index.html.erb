@@ -1,5 +1,8 @@
 ---
 title: About
+headline: ample
+lead: Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus.
+small: Cincinnati, Ohio
 ---
 <header class="ample">
 
@@ -19,14 +22,17 @@ title: About
 
     <div class="header-text">
       <div>
-        <h1>Ample</h1>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus.</p>
-        <small>Branding, Site Design, HTML &amp; CSS</small>
+        <h1><%= current_page.data.headline %></h1>
+        <p><%= current_page.data.lead %></p>
+        <small><%= current_page.data.small %></small>
       </div>
     </div>
 
-    <%= image_tag ('images/ample_site1.jpg'), alt:'ample website', class:'img-responsive' %>
-    <caption>Home</caption>
-    <p><%= lorem.paragraphs(10) %></p>
+    <div class="content">
+      <% 2.times do %>
+      <%= image_tag ('images/ample_site1.jpg'), alt:'ample website', class:'img-responsive' %>
+      <p class="caption">Home</p>
+      <% end %>
+    </div>
   </div>
 </article>
