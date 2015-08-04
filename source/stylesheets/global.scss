@@ -10,6 +10,18 @@ body {
 footer {
   margin: 300px 0 50px 0;
   text-align: center;
+
+  li {
+    background: $black;
+    color: $white;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+
+    i {
+      padding-top: 12px;
+    }
+  }
 }
 
 .container-fluid {
@@ -20,12 +32,11 @@ footer {
 h1 {
   font-family: $headlineFontFamily;
   font-style: normal;
-  font-weight: 700;
-  font-size: 6em;
+  font-weight: 200;
+  font-size: 4em;
   text-transform: lowercase;
-  letter-spacing: -.04em;
 
   @media (max-width: $screen-sm) {
-    font-size: 5em;
+    font-size: 3em;
   }
 }

@@ -64,19 +64,22 @@
 
       p {
         margin: 0;
-        font-style: italic;
-        font-size: 1.2em;
+        //font-style: italic;
+        font-size: 1em;
+        letter-spacing: .02em;
+        color: $gray;
       }
 
       small:before {
-        margin: .3em 0;
+        margin: 1em 0 0 0;
       	content: "* * *";
       	display: block;
       	text-align: center;
       }
 
       small {
-        font-size: .8em;
+        font-family: $headlineFontFamily;
+        font-size: .7em;
         letter-spacing: .2em;
         text-transform: uppercase;
         color: $gray;

@@ -2,9 +2,49 @@
 title: Welcome to Middleman
 ---
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<div class="container">
+  <div class="welcome">
+    <h1>Middleman is Watching</h1>
+    <p class="doc">
+      <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
+    </p><!-- .doc -->
+  </div><!-- .welcome -->
+
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail thumbnail1">
+        <%= image_tag 'ample_site1.jpg', class:'img-responsive' %>
+        <div class="caption">
+          <div class="text">
+            <h3>Thumbnail label</h3>
+            <p><%= lorem.words(5) %></p>
+          </div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail thumbnail2">
+        <div class="caption">
+          <div class="text">
+            <h3>Thumbnail label</h3>
+            <p><%= lorem.words(5) %> This one.</p>
+          </div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail thumbnail3">
+        <%= image_tag 'corner.png' %>
+        <div class="caption">
+          <div class="text">
+            <h3>Thumbnail label</h3>
+            <p><%= lorem.words(5) %></p>
+          </div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

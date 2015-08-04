@@ -38,13 +38,17 @@ $linkColor:                        $orangeDark;
 $linkColorHover:                   darken($linkColor, 15%);
 
 // Typography
-$baseFontSize:                     16px;
-$baseFontFamily:                   "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$headlineFontFamily:               "kepler-std-extended-subhead",serif;
-$navFontFamily:                    "ff-dax-web-pro-condensed",sans-serif;
-$baseLineHeight:                   20px;
-$textColor:                        $greenDark;
-$headlineTextColor:                $greenBright;
+$baseFontSize:                     12px;
+$baseFontFamily:                   Georgia, serif;
+
+//$baseFontFamily:                   "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headlineFontFamily:               "ff-dagny-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$headlineFontFamily:               "ff-ernestine-web-pro", Georgia,serif;
+$navFontFamily:                    $headlineFontFamily;
+//$smallFontFamily:                  "news-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseLineHeight:                   18px;
+$textColor:                        $black;
+$headlineTextColor:                $grayDark;
 
 // Buttons
 $primaryButtonBackground:          $linkColor;
