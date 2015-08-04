@@ -18,8 +18,8 @@ a {
 }
 
 body {
-  background: image-url('body-bg.gif') repeat $tan;
-  font-family:  $font-family-base;
+  background: $tan;
+  font-family:  $font-family-serif;
   font-size: $font-size-base;
   font-weight: $font-weight-reg;
   line-height: $line-height-base;
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin: 0;
-  font-family:  $font-family-comp;
+  font-family:  $font-family-sans;
   font-size: $font-size-h1;
   line-height: .85;
   color: $red;
@@ -64,38 +64,10 @@ h1 {
   @media (max-width: $screen-xs-max) {
     font-size: $font-size-h1 * .75;
   }
-
-  .intro & {
-    margin: 0;
-    padding: $space-md 0 0 0;
-    background: $red;
-    font-size: 190px;
-    color: $tan;
-    border-bottom: 2px solid $red-dark;
-
-    @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
-      font-size: 150px;
-    }
-    @media (max-width: $screen-xs-max) {
-      padding: $space-sm 0 $space-xs;
-      font-size: 60px;
-    }
-
-    img {
-      @media (max-width: $screen-md-max) {
-        width: 5%;
-        height: auto;
-      }
-    }
-  }
-
-  .contact & {
-    margin-top: $space-lg;
-  }
 }
 
 h2 {
-  font-family:  $font-family-comp;
+  font-family:  $font-family-sans;
   font-size: $font-size-h2;
   letter-spacing: .03em;
   line-height: $line-height-sm;
@@ -109,7 +81,7 @@ h2 {
 
   small {
     display: block;
-    font-family:  $font-family-cond;
+    font-family:  $font-family-sans;
     font-size: 15px;
     letter-spacing: .15em;
     color: $red;
@@ -141,7 +113,7 @@ h2 {
 
 h3 {
   font-size: $font-size-h3;
-  font-family: $font-family-cond;
+  font-family: $font-family-sans;
   letter-spacing: .05em;
   color: $red;
 }
@@ -175,7 +147,7 @@ img {
 }
 
 nav {
-  font-family:  $font-family-cond;
+  font-family:  $font-family-sans;
   font-size: $font-size-medium;
   letter-spacing: .1em;
   text-transform: uppercase;

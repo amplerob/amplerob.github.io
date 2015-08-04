@@ -23,7 +23,7 @@ $green-light:             #666c4c;
 $green-lighter:           #a4a98f;
 $red:											#a30a0a;
 $red-dark:								#750000;
-$tan:											#e7d2a8;
+$tan:											#ebe8e1;
 
 // Links
 $social-links:            $green-light;
@@ -33,16 +33,15 @@ $social-links-hover:      $green-lighter;
 $font-color:              $black;
 $headline-color:          $black;
 
-$font-family-comp:        "alternate-gothic-no-1-d", sans-serif;
-$font-family-cond:        "alternate-gothic-no-3-d", sans-serif;
-$font-family-base:        "franklin-gothic-urw-cond", sans-serif;
+$font-family-sans:        "franklin-gothic-urw-comp", sans-serif;
+$font-family-serif:        "ff-tisa-web-pro", Georgia, serif;
 $font-size-base:          18px;
 $font-size-large:         23px;
 $font-size-medium:        16px;
 $font-size-small:         14px;
 
-$font-weight-reg:         400; // $font-family-base, $font-family-cond, $font-family-comp
-$font-weight-bold:        700; // $font-family-base
+$font-weight-reg:         400; // $font-family-serif, $font-family-sans, $font-family-sans
+$font-weight-bold:        700; // $font-family-serif
 
 $font-size-h1:            floor(($font-size-base * 5));
 $font-size-h2:            floor(($font-size-base * 1.8));
