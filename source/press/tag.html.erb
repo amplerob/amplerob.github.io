@@ -1,0 +1,15 @@
+---
+title: Press Category
+pageable: true
+press: false
+---
+<div class="container-fluid">
+  <h1><%= tagname %> Press</h1> 
+
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 ">
+      <%= partial 'partials/press-filter' %>
+      <%= partial 'partials/press', :locals =>{paginate: paginate, num_pages: num_pages, prev_page: prev_page, next_page: next_page, page_number: page_number, page_articles: page_articles} %>
+    </div>
+  </div>
+</div>

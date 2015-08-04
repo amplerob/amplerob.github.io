@@ -1,0 +1,36 @@
+.intro {
+	margin-bottom: $space-xl;
+	border-top: 2px solid $red-dark;
+	border-bottom: 2px solid $red-dark;
+	
+	@media (max-width: $screen-sm-max) {
+		margin-bottom: $space-lg;
+	}
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: $space-md;
+	}
+
+	ul {
+		margin: 0;
+		background: $red-dark;
+		border-top: 1px solid $red;
+		border-bottom: 1px solid $red;
+
+		@media (max-width: $screen-xs-max) {
+			padding-bottom: $space-xs;
+		}
+	}
+
+	li {
+		padding: $space-xs $space-md;
+		font-family: $font-family-cond;
+		font-size: $font-size-base;
+		letter-spacing: .1em;
+		color: $white;
+		text-transform: uppercase;
+
+		@media (max-width: $screen-xs-max) {
+			padding-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteCond %{http_host} !^www.eaglerestaurant.com [nc]
+RewriteRule ^(.*)$ http://www.eaglerestaurant.com/$1 [r=301,nc]
