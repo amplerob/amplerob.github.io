@@ -9,7 +9,7 @@
 // Grays
 $gray:                    #aaaaaa;
 $gray-hover:              darken($gray, 5%);
-$black:                   #413b33;
+$black:                   #928e85;
 $gray-darker:             #514a3e;
 $gray-dark:               #726856;
 $gray-light:              lighten($gray, 10%);
@@ -23,9 +23,14 @@ $green-light:             #666c4c;
 $green-lighter:           #a4a98f;
 $red:											#a30a0a;
 $red-dark:								#750000;
+
+$blue:										#7b8e9a;
+$gold:										#d5bf5c;
 $tan:											#ebe8e1;
 
 // Links
+$link-color:							$blue;
+$link-color-hover:				darken($blue, 10%);
 $social-links:            $green-light;
 $social-links-hover:      $green-lighter;
 
@@ -35,7 +40,7 @@ $headline-color:          $black;
 
 $font-family-sans:        "franklin-gothic-urw-comp", sans-serif;
 $font-family-serif:        "ff-tisa-web-pro", Georgia, serif;
-$font-size-base:          18px;
+$font-size-base:          16px;
 $font-size-large:         23px;
 $font-size-medium:        16px;
 $font-size-small:         14px;

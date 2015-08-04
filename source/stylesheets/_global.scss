@@ -1,9 +1,9 @@
 a {
-  color: $black;
-  text-decoration: underline;
+  color: $link-color;
+  text-decoration: none;
 
   &:hover {
-    color: $red;
+    color: $link-color-hover;
   }
 
   h1 &,
@@ -42,7 +42,6 @@ form {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: $font-weight-reg;
-  text-transform: uppercase;
 
   .footer-global & {
     @media (max-width: $screen-xs-max) {
@@ -52,11 +51,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin: 0;
+  //margin: 0;
   font-family:  $font-family-sans;
   font-size: $font-size-h1;
   line-height: .85;
-  color: $red;
+  color: $gold;
 
   @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
     font-size: $font-size-h1 * .85;
@@ -144,6 +143,10 @@ img {
   @media (min-width: $screen-lg-min) {
     margin-bottom: 30px;
   }
+}
+
+main {
+  margin: 10% 0;
 }
 
 nav {
