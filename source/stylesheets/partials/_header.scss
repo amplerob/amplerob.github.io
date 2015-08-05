@@ -1,113 +1,87 @@
-.header-global {
-  .navbar-default {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    border: none;
+.navbar-default {
+  margin: 0;
+  padding: 0 0 .75em 0;
+  background: $tan;
+  border: none;
+  border-radius: 0;
 
-    .navbar-nav {
-      margin-top: -145px;
-      padding: 0 $space-md;
-      background: image-url('navbar-bg.png') repeat-x;
-      width: 37.5%;
+  .navbar-nav {
+    li {
+      //float: none;
+      display: inline-block;
 
-      @media (max-width: $screen-sm-max) {
-        padding: 0 $space-xs;
-        width: 35%;
-      }
-      @media (max-width: $screen-xs-max) {
-        margin: 0;
-        padding: 0;
-        background: transparent;
-        width: auto;
+      @media (min-width: $screen-sm-min) {
+        padding-left: .5em;
       }
 
-      li {
-        float: none;
-        display: inline-block;
+      a {
+        padding: 3em .5em .5em;
+        color: #a6a298;
 
         @media (max-width: $screen-xs-max) {
-          display: block;
+          margin: 0;
+          padding: 12px;
+          border-top: 1px solid $border-color;
+
+          &:after,
+          &:before {
+            padding: 0 1em;
+            content: "★";
+            font-size: 7px;
+            vertical-align: 15%;
+          }
         }
 
-        a {
-          padding: 8px 16px;
-          color: $black;
-
-          @media (max-width: $screen-sm-max) {
-            padding: 8px;
-          }
-          @media (max-width: $screen-xs-max) {
-            margin: 0;
-            padding: 12px;
-            border-top: 1px solid $border-color;
-
-            &:after,
-            &:before {
-              padding: 0 1em;
-              content: "★";
-              font-size: 7px;
-              vertical-align: 15%;
-            }
-          }
-
-          &.active,
-          &:focus,
-          &:hover {
-            @include border-radius(0);
-            background: transparent;
-            color: $red;
-          }
+        &.active,
+        &:focus,
+        &:hover {
+          @include border-radius(0);
+          background: $gold;
+          color: $white;
         }
       }
     }
-
-    .navbar-collapse {
-      padding: 0;
-      border: none;
-      box-shadow: none;
-    }
   }
 
-  .navbar-header {
-    padding: $space-sm 0;
-    width: 100%;
-
-    @media (max-width: $screen-xs-max) {
-      margin: 0;
-    }
-  }
-
-  .navbar-logo {
-    @include bg-image-retina('logo-header', png, 210px, 210px, 0, 0);
-    display: block;
-    width: 210px;
-    height: 210px;
-
-    @media (max-width: $screen-xs-max) {
-      @include bg-image-retina('logo-header', png, 150px, 150px, 0, 0);
-      width: 150px;
-      height: 150px;
-    }
-  }
-
-  .navbar-right {
-    margin-right: 0;
-  }
-
-  .navbar-toggle {
-    margin: 50px 5px 0 0;
+  .navbar-collapse {
+    padding: 0;
     border: none;
-    @include border-radius(2px);
-    background: image-url('navbar-toggle-bg.png');
-    color: $tan;
+    box-shadow: none;
+  }
+}
 
-    &:focus, &:hover {
-      color: $white;
-    }
+// .navbar-header {
+//   padding: $space-sm 0;
+//   width: 100%;
+//
+//   @media (max-width: $screen-xs-max) {
+//     margin: 0;
+//   }
+// }
 
-    .fa-lg {
-      vertical-align: -25%;
-    }
+.navbar-logo {
+  margin-top: 2.25em;
+  @include bg-image-retina('logo', png, 140px, 39px, 0, 0);
+  display: block;
+  width: 140px;
+  height: 39px;
+}
+
+.navbar-right {
+  margin-right: 0;
+}
+
+.navbar-toggle {
+  margin: 50px 5px 0 0;
+  border: none;
+  @include border-radius(2px);
+  color: $tan;
+
+  &:focus, &:hover {
+    color: $white;
+  }
+
+  .fa-lg {
+    vertical-align: -25%;
   }
 }

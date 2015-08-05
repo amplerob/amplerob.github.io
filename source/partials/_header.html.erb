@@ -1,24 +1,17 @@
 <div class="container-fluid">
-  Header!
-  <!-- <div class="navbar-header">
+  <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
       <span class="sr-only">Toggle navigation</span>
       <i class="fa fa-bars fa-lg"></i>
     </button>
-    <%= link_to ' ', '/', class: 'navbar-logo center-block' %>
-  </div> -->
+    <%= link_to ' ', '/', class: 'navbar-logo' %>
+  </div>
 
-  <!-- <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="/" class="<%= 'active' if current_page.path =~ /^index/ %>">Home</a></li>
-        <li><a href="/menu" class="<%= 'active' if current_page.path =~ /^menu/ %>">Menu</a></li>
-        <li><a href="/press" class="<%= 'active' if current_page.path =~ /^press/ %>">Press</a></li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://www.facebook.com/TheEagleOTR" target="blank">Facebook</a></li>
-        <li><a href="https://twitter.com/theeagleotr" target="blank">Twitter</a></li>
-        <li><a href="/contact">Email</a></li>
-      </ul>
-  </div> -->
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/" class="<%= 'active' if current_page.path =~ /^index/ %>">Home</a></li>
+      <li><a href="/" class="<%= 'active' if current_page.path =~ /^project/ %>">Projects</a></li>
+      <li><a href="/" class="<%= 'active' if current_page.path =~ /^thoughts/ %>">Thoughts</a></li>
+    </ul>
+  </div>
 </div>
