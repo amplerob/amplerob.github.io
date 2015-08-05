@@ -1,11 +1,21 @@
-<div class="row">
-  <div class="col-sm-10 col-sm-offset-1">
-    <p><small>In the meantime, say "hey" on <%= link_to 'Twitter', 'http://twitter.com/rsloan39' %>, <%= link_to 'Instagram', 'http://instagram.com/rsloan39' %> or <%= link_to 'LinkedIn', 'https://www.linkedin.com/in/rsloan39' %>.<br>Or check out some work at <%= link_to 'Ample', 'http://helloample.com' %>.</small></p>
-    <!-- <nav class="footer-links">
-      <ul class="list-inline">
-        <li><a href="/" class="<%= 'active' if current_page.path =~ /^index/ %>">Home</a></li>
-      </ul>
-    </nav>
-    <p class="footer-copyright">©2015 rsloan39</p> -->
-  </div>
+<nav class="footer-links visible-xs">
+  <ul class="list-unstyled">
+    <li><a href="/" class="<%= 'active' if current_page.path =~ /^index/ %>">Home</a></li>
+    <li><a href="/" class="<%= 'active' if current_page.path =~ /^project/ %>">Projects</a></li>
+    <li><a href="/" class="<%= 'active' if current_page.path =~ /^thoughts/ %>">Thoughts</a></li>
+  </ul>
+</nav>
+
+<div class="footer-social">
+  <ul class="list-inline">
+    <li><a href="https://www.linkedin.com/in/rsloan39" target="blank"><i class="fa fa-linkedin fa-fw"><span class="sr-only">LinkedIn</span></i></a></li>
+    <li><a href="http://twitter.com/rsloan39" target="blank"><i class="fa fa-twitter fa-fw"><span class="sr-only">Twitter</span></i></a></li>
+    <li><a href="http://instagram.com/rsloan39" target="blank"><i class="fa fa-instagram fa-fw"><span class="sr-only">Instagram</span></i></a></li>
+    <li><a href="#"><i class="fa fa-envelope fa-fw"><span class="sr-only">Email me</span></i></a></li>
+  </ul>
+</div>
+
+<div class="footer-small">
+  <p>rsloan39 is a designer, front-developer and proud co-founder of <%= link_to 'Ample', 'http://helloample.com' %>. He works remotely from Bend, Oregon and occasionally talks in the third person.</p>
+  <p>This site is hosted on <%= link_to 'Github', 'http://github.com' %> and built with <%= link_to 'Middleman', 'http://middlemanapp.com' %> and <%= link_to 'Bootstrap', 'http://getbootstrap.com' %>.</p>
 </div>

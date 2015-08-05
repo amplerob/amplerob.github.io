@@ -1,11 +1,11 @@
 .index {
   .lead {
     margin: 0 $space-xl $space-xl;
-    font-size: $font-size-large;
+    font-size: $font-size-lg;
 
     @media (max-width: $screen-xs-max) {
       margin: $space-lg;
-      font-size: $font-size-large - 3;
+      font-size: $font-size-lg - 3;
     }
   }
 }

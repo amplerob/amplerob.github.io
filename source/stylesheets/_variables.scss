@@ -27,6 +27,8 @@ $red-dark:								#750000;
 $blue:										#7b8e9a;
 $gold:										#d5bf5c;
 $tan:											#ebe8e1;
+$tan-light: 							#cbc5b6;
+$tan-lighter: 						#ddd7c9;
 
 // Links
 $link-color:							$blue;
@@ -38,14 +40,15 @@ $social-links-hover:      $green-lighter;
 $font-color:              $black;
 $headline-color:          $black;
 
-$font-family-sans:        "franklin-gothic-urw-comp", sans-serif;
-$font-family-serif:        "ff-tisa-web-pro", Georgia, serif;
+$font-family-sans:        'franklin-gothic-urw-comp', sans-serif;
+$font-family-serif:       'ff-tisa-web-pro', Georgia, serif;
 $font-size-base:          16px;
-$font-size-large:         23px;
-$font-size-medium:        16px;
-$font-size-small:         14px;
+$font-size-lg:         		1.4em;
+$font-size-md:       		 	1.2em;
+$font-size-sm:         		.9em;
+$font-size-xs:         		.8em;
 
-$font-weight-reg:         400; // $font-family-serif, $font-family-sans, $font-family-sans
+$font-weight-reg:         400; // $font-family-serif; $font-family-sans; $font-family-sans
 $font-weight-bold:        700; // $font-family-serif
 
 $font-size-h1:            floor(($font-size-base * 5));
@@ -65,9 +68,9 @@ $border-color:            #ac9e81;
 $border-color-dark:       darken($border-color, 10%);
 
 // Spacing
-$gutter:    30px;
-$space-xl:  $gutter*2.5;  // 75px
-$space-lg:  $gutter*1.5;  // 45px
-$space-md:  $gutter;      // 30px
-$space-sm:  $gutter*.6;   // 18px
-$space-xs:  $gutter*.3;   // 9px
+$gutter:    $grid-gutter-width;
+$space-xl:  $gutter*2.5;
+$space-lg:  $gutter*1.5;
+$space-md:  $gutter;
+$space-sm:  $gutter*.6;
+$space-xs:  $gutter*.3;

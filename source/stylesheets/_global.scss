@@ -145,14 +145,14 @@ img {
   }
 }
 
-main {
-  margin: 10% 0;
-}
+// main {
+//   margin: 10% 0;
+// }
 
 nav {
   font-family:  $font-family-sans;
-  font-size: $font-size-medium;
-  letter-spacing: .1em;
+  //font-size: $font-size-md;
+  letter-spacing: .05em;
   text-transform: uppercase;
 
   a,
@@ -161,7 +161,7 @@ nav {
   }
 }
 
-p {
-  margin-bottom: 1.75em;
-  letter-spacing: .015em;
-}
+// p {
+//   margin-bottom: 1.75em;
+//   letter-spacing: .015em;
+// }

@@ -3,68 +3,67 @@
   text-align: center;
 }
 
-.footer-copyright {
-  margin-bottom: $space-lg;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: .075em;
-}
-
-.footer-divider {
-  @include block-spacing(margin, lg);
-}
-
 .footer-links {
+  margin-bottom: $space-xs;
+
   a {
-    font-size: $font-size-medium;
+    padding: .5em;
+    display: block;
+    font-size: $font-size-md;
 
     &.active,
     &:focus,
     &:hover {
-      color: $red;
+      color: $white;
+      background: $gold;
     }
   }
 }
 
-.footer-location-hours {
-  line-height: $line-height-sm;
-
-  p {
-    margin-bottom: 1.5em;
-  }
-
+.footer-small {
+  margin-bottom: $space-md;
+  font-size: $font-size-xs;
 }
 
-.footer-press {
-  margin: $space-xl 0 $space-md;
-  padding-top: $space-md;
-  background: image-url('navbar-bg.png') 0 -33px repeat-x;
-  @include card-grid(2,2,4,4);
+.footer-social {
+  margin-bottom: $space-xs;
 
   @media (max-width: $screen-xs-max) {
-    margin-top: $space-md;
-    padding-top: $space-xs;
-    font-size: $font-size-medium;
-    line-height: $line-height-md;
-  }
-
-  img {
-    margin-bottom: $space-xs;
-    width: 50%;
-    height: auto;
-
-    @media (max-width: $screen-md-max) {
-      width: 50%;
-    }
-    @media (max-width: $screen-sm-max) {
-      width: 40%;
-    }
-    @media (max-width: $screen-xs-max) {
-      width: 70%;
+    &:after,
+    &:before {
+      content: "—";
+      display: block;
+      color: $tan-light;
     }
   }
 
-  .card {
-    @include block-spacing(padding, sm);
+  a {
+    color: $black;
+
+    &:hover {
+      color: $tan;
+
+      .fa {
+        background: $gold;
+      }
+    }
+
+    .fa {
+      margin: 0;
+      padding: .4em 0;
+      font-size: $font-size-md;
+      background: transparent;
+      border-radius: 50%;
+      width:  1.75em;
+      height: 1.75em;
+    }
+  }
+
+  li {
+    padding: 0;
+  }
+
+  ul {
+    margin: 1em 0;
   }
 }
