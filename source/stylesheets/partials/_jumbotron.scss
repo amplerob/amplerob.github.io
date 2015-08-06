@@ -2,18 +2,4 @@
   margin: 0;
   padding: 0;
   @include border-radius(0);
-  border-top: 1px solid $tan;
-
-  &.jumbotron-contact {
-    @include bg-image-jumbotron('jumbotron-intro-contact.jpg', center, center, 400px, 350px, 300px, 275px, 250px);
-  }
-  &.jumbotron-index {
-    @include bg-image-jumbotron('jumbotron-intro-index.jpg', center, bottom, 625px, 550px, 450px, 350px, 250px);
-  }
-  &.jumbotron-menu {
-    @include bg-image-jumbotron('jumbotron-intro-menu.jpg', center, bottom, 400px, 350px, 300px, 275px, 250px);
-  }
-  &.jumbotron-press {
-    @include bg-image-jumbotron('jumbotron-intro-press.jpg', center, center, 400px, 350px, 300px, 275px, 250px);
-  }
 }

@@ -1,26 +1,91 @@
 // Full width background image
-@mixin bg-image-jumbotron($image-path, $vert-pos, $horiz-pos, $xl-height, $lg-height, $md-height, $sm-height, $xs-height) {
-
-  height: $xs-height;
-
-  @media (min-width: $screen-sm-min){
-    height: $sm-height;
-  }
-  @media (min-width: $screen-md-min){
-    height: $md-height;
-  }
-  @media (min-width: $screen-lg-min){
-    height: $lg-height;
-  }
-  @media (min-width: $screen-lg-min + 300){
-    height: $xl-height;
-  }
-
+@mixin jumbotron-bg($image-path, $vert-pos, $horiz-pos) {
   background: image-url('#{$image-path}') no-repeat $vert-pos $horiz-pos;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/#{$image-path}', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/#{$image-path}', sizingMethod='scale')";
 }
+
+@mixin project($color, $image-path) {
+  $base-color: $color;
+  $base-color-dark: darken($base-color, 8%);
+  $base-color-light: lighten($base-color, 10%);
+  $base-color-saturate: saturate($base-color-light, 10%);
+  $h1-color: $white;
+  $text-color: lighten($base-color, 50%);
+  $jumbotron-height: 500px;
+
+	background: $base-color;
+
+	.jumbotron {
+		@include gradient-vertical($base-color, $base-color-saturate, 20%, 100%);
+		position: relative;
+
+		@media (min-width: $screen-md-min) {
+			height: $jumbotron-height;
+		}
+
+		h1 {
+			color: $h1-color;
+			font-size: $font-size-h1;
+		}
+
+		p {
+			font-size: $font-size-md;
+			color: $text-color;
+		}
+	}
+
+	.jumbotron-bg {
+		@include jumbotron-bg('#{$image-path}', right, top);
+
+		@media (min-width: $screen-md-min) {
+			height: $jumbotron-height;
+		}
+	}
+
+	.jumbotron-wrapper {
+		padding-bottom: 1em;
+		width: 100%;
+
+		@media (min-width: $screen-md-min) {
+			padding-bottom: 0;
+			position: absolute;
+			bottom: 1em;
+		}
+	}
+	.jumbotron-cta {
+		padding: 1em 0 1.4em;
+		background: $base-color;
+
+		.btn {
+			@include button-variant($white, $base-color-saturate, transparent);
+			@include button-size(.8em, 2.5em, $font-size-base, 1, 4px);
+			font-style: italic;
+
+			&:active,
+			&:focus,
+			&:hover {
+				@include button-variant($white, $base-color, transparent);
+			}
+
+			@media (max-width: $screen-xs-max) {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Retina bg images
 @mixin bg-image-retina($image-path, $type, $width, $height, $xpos, $ypos) {

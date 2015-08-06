@@ -25,7 +25,7 @@ body {
   line-height: $line-height-base;
   color: $font-color;
   -webkit-font-smoothing: antialiased;
-  text-align: center;
+  //text-align: center;
 }
 
 form {
@@ -51,10 +51,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  //margin: 0;
+  margin: .4em 0 .2em;
   font-family:  $font-family-sans;
   font-size: $font-size-h1;
   line-height: .85;
+  letter-spacing: -.02em;
   color: $gold;
 
   @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
