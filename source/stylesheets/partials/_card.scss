@@ -18,8 +18,15 @@
 	}
 
 	.thumbnail {
+		margin-bottom: 15px;
 		padding: 0;
+		background: $white;
+		background: rgba(255,255,255,.9);
 		border: none;
 		@include border-radius(0);
+
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: $space-md;
+		}
 	}
 }
