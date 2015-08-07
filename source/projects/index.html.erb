@@ -6,23 +6,23 @@ title: "Projects"
   <h1>Projects</h1>
   <div class="card-grid card-grid-projects">
   	<div class="row">
-  		<% 8.times do %>
-
-          <div class="card sloan-digital">
-            <a href="#">
-            <div class="thumbnail">
-              <div class="project-img"></div>
-              <div class="caption">
-                <h2>Sloan Digital</h2>
-                <ul class="list-unstyled">
-                  <li>Branding</li>
-                </ul>
-              </div>
+      <% data.projects.each do |i, project| %>
+        <div class="card <%= project.name %>">
+          <a href="/projects/<%= project.name %>.html">
+          <div class="thumbnail">
+            <div class="project-img"></div>
+            <div class="caption">
+              <h2><%= project.title %></h2>
+              <ul class="list-inline project-list text-center">
+                <% project.categories.each do |category| %>
+                  <li><%= category %></li>
+                <% end %>
+              </ul>
             </div>
-            </a>
           </div>
-
-  		<% end %>
+          </a>
+        </div>
+      <% end %>
   	</div>
   </div>
 </div>

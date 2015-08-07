@@ -12,4 +12,23 @@
 	.card-grid-projects {
 	  @include card-grid(1,3,3,4);
 	}
+
+	.project-list {
+		margin: 0;
+
+		li {
+			padding: 0;
+			text-transform: capitalize;
+
+			&:after {
+				content: ', ';
+			}
+
+			&:last-of-type {
+				&:after {
+					content: '';
+				}
+			}
+		}
+	}
 }

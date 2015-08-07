@@ -64,25 +64,6 @@
 	}
 
 	.project-topics {
-		padding: .5em 0 2em;
-
-		li {
-			padding: 0;
-			text-transform: capitalize;
-
-			&:after {
-				content: ', ';
-			}
-
-			&:last-of-type {
-				&:after {
-					content: '';
-				}
-			}
-		}
-
-		ul {
-			margin: 0;
-		}
+		padding: 1.2em 0 2em;
 	}
 }

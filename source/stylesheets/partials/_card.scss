@@ -28,5 +28,9 @@
 		@media (min-width: $screen-sm-min) {
 			margin-bottom: $space-md;
 		}
+
+		.caption {
+			padding-bottom: $space-xs;
+		}
 	}
 }
