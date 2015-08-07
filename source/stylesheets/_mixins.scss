@@ -1,3 +1,94 @@
+// Retina bg images
+@mixin bg-image-retina($image-path, $type, $width, $height, $xpos, $ypos) {
+  background-image: image-url($image-path + '.' + $type);
+  background-size:  $width $height;
+  background-position: $xpos $ypos;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx){
+    & {
+      background-image: image-url($image-path + '@2x.' + $type);
+      -webkit-background-size:        $width $height;
+      -moz-background-size:           $width $height;
+      -o-background-size:             $width $height;
+      background-size:                $width $height;
+
+      -webkit-background-position:    $xpos $ypos;
+      -moz-background-position:       $xpos $ypos;
+      -o-background-position:         $xpos $ypos;
+      background-position:            $xpos $ypos;
+    }
+  }
+}
+
+// Border radius
+@mixin border-radius($radius) {
+  @include border-top-radius($radius);
+  @include border-bottom-radius($radius);
+}
+
+// Create a grid of cards
+// Specify how many cards at each breakpoint
+@mixin card-grid($xs-per-row, $sm-per-row, $md-per-row, $lg-per-row) {
+
+  $xs-col: 12/$xs-per-row;
+  $sm-col: 12/$sm-per-row;
+  $md-col: 12/$md-per-row;
+  $lg-col: 12/$lg-per-row;
+
+  @media (max-width: $screen-xs-max) {
+    $nChild: $xs-per-row;
+
+    .card {
+      @include make-xs-column($xs-col);
+
+      &:nth-child(#{$nChild}n+1) {
+        clear: both;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    $nChild: $sm-per-row;
+
+    .card {
+      @include make-sm-column($sm-col);
+
+      &:nth-child(#{$nChild}n+1) {
+        clear: both;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    $nChild: $md-per-row;
+
+    .card {
+      @include make-md-column($md-col);
+
+      &:nth-child(#{$nChild}n+1) {
+        clear: both;
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    $nChild: $lg-per-row;
+
+    .card {
+      @include make-lg-column($lg-col);
+
+      &:nth-child(#{$nChild}n+1) {
+        clear: both;
+      }
+    }
+  }
+}
+
 // Full width background image
 @mixin jumbotron-bg($image-path, $vert-pos, $horiz-pos) {
   background: image-url('#{$image-path}') no-repeat $vert-pos $horiz-pos;
@@ -51,212 +142,5 @@
 
   .project-topics {
     background: $base-color-saturate;
-  }
-}
-
-
-
-
-
-
-
-
-
-// Retina bg images
-@mixin bg-image-retina($image-path, $type, $width, $height, $xpos, $ypos) {
-  background-image: image-url($image-path + '.' + $type);
-  background-size:  $width $height;
-  background-position: $xpos $ypos;
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (-moz-min-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx){
-    & {
-      background-image: image-url($image-path + '@2x.' + $type);
-      -webkit-background-size:        $width $height;
-      -moz-background-size:           $width $height;
-      -o-background-size:             $width $height;
-      background-size:                $width $height;
-
-      -webkit-background-position:    $xpos $ypos;
-      -moz-background-position:       $xpos $ypos;
-      -o-background-position:         $xpos $ypos;
-      background-position:            $xpos $ypos;
-    }
-  }
-}
-
-
-
-// Consistent spacing for content sections
-// Properties: margin or padding
-// Sizes: lg, md, sm or xs
-@mixin block-spacing($property, $size) {
-  // x-large
-  @if ($size == xl) {
-    $md-spacing: $space-xl;
-    $sm-spacing: $space-lg;
-    $xs-spacing: $space-md;
-
-    @if ($property == margin) {
-      @include block-spacing-margin($md-spacing, $sm-spacing, $xs-spacing);
-    }
-    @if ($property == padding) {
-      @include block-spacing-padding($md-spacing, $sm-spacing, $xs-spacing);
-    }
-  }
-  // large
-  @if ($size == lg) {
-    $md-spacing: $space-lg;
-    $sm-spacing: $space-md;
-    $xs-spacing: $space-md;
-
-    @if ($property == margin) {
-      @include block-spacing-margin($md-spacing, $sm-spacing, $xs-spacing);
-    }
-    @if ($property == padding) {
-      @include block-spacing-padding($md-spacing, $sm-spacing, $xs-spacing);
-    }
-  }
-  // medium
-  @if ($size == md) {
-    $md-spacing: $space-md;
-    $sm-spacing: $space-sm;
-    $xs-spacing: $space-xs;
-
-    @if ($property == margin) {
-      @include block-spacing-margin($md-spacing, $sm-spacing, $xs-spacing);
-    }
-    @if ($property == padding) {
-      @include block-spacing-padding($md-spacing, $sm-spacing, $xs-spacing);
-    }
-  }
-  // small
-  @if ($size == sm) {
-    $md-spacing: $space-sm;
-    $sm-spacing: $space-sm;
-    $xs-spacing: $space-xs;
-
-    @if ($property == margin) {
-      @include block-spacing-margin($md-spacing, $sm-spacing, $xs-spacing);
-    }
-    @if ($property == padding) {
-      @include block-spacing-padding($md-spacing, $sm-spacing, $xs-spacing);
-    }
-  }
-  // x-small
-  @if ($size == xs) {
-    $md-spacing: $space-xs;
-    $sm-spacing: $space-xs;
-    $xs-spacing: $space-xs;
-
-    @if ($property == margin) {
-      @include block-spacing-margin($md-spacing, $sm-spacing, $xs-spacing);
-    }
-    @if ($property == padding) {
-      @include block-spacing-padding($md-spacing, $sm-spacing, $xs-spacing);
-    }
-  }
-}
-
-@mixin block-spacing-margin($md-spacing, $sm-spacing, $xs-spacing) {
-  margin-top:    $md-spacing;
-  margin-bottom: $md-spacing;
-
-  @media (max-width: $screen-sm-max) and (min-width: $screen-xs-min) {
-    margin-top:    $sm-spacing;
-    margin-bottom: $sm-spacing;
-  }
-  @media (max-width: $screen-xs-max){
-    margin-top:    $xs-spacing;
-    margin-bottom: $xs-spacing;
-  }
-}
-
-@mixin block-spacing-padding($md-spacing, $sm-spacing, $xs-spacing) {
-  padding-top:    $md-spacing;
-  padding-bottom: $md-spacing;
-
-  @media (max-width: $screen-sm-max) and (min-width: $screen-xs-min) {
-    padding-top:    $sm-spacing;
-    padding-bottom: $sm-spacing;
-  }
-  @media (max-width: $screen-xs-max){
-    padding-top:    $xs-spacing;
-    padding-bottom: $xs-spacing;
-  }
-}
-
-// Border radius
-@mixin border-radius($radius) {
-  @include border-top-radius($radius);
-  @include border-bottom-radius($radius);
-}
-
-
-// Create a grid of cards
-// Specify how many cards at each breakpoint
-@mixin card-grid($xs-per-row, $sm-per-row, $md-per-row, $lg-per-row) {
-
-  $xs-col: 12/$xs-per-row;
-  $sm-col: 12/$sm-per-row;
-  $md-col: 12/$md-per-row;
-  $lg-col: 12/$lg-per-row;
-
-  @media (max-width: $screen-xs-max) {
-    $nChild: $xs-per-row;
-
-    .card {
-      @include make-xs-column($xs-col);
-
-      &:nth-child(#{$nChild}n+1) {
-        clear: both;
-      }
-    }
-  }
-
-  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    $nChild: $sm-per-row;
-
-    .card {
-      @include make-sm-column($sm-col);
-      //border-left: 1px solid $border-color;
-
-      &:nth-child(#{$nChild}n+1) {
-        clear: both;
-        //border-left: 1px solid transparent;
-      }
-    }
-  }
-
-  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    $nChild: $md-per-row;
-
-    .card {
-      @include make-md-column($md-col);
-      //border-left: 1px solid $border-color;
-
-      &:nth-child(#{$nChild}n+1) {
-        clear: both;
-        //border-left: 1px solid transparent;
-      }
-    }
-  }
-
-  @media (min-width: $screen-lg) {
-    $nChild: $lg-per-row;
-
-    .card {
-      @include make-lg-column($lg-col);
-      //border-left: 1px solid $border-color;
-
-      &:nth-child(#{$nChild}n+1) {
-        clear: both;
-        //border-left: 1px solid transparent;
-      }
-    }
   }
 }

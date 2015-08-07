@@ -1,6 +1,17 @@
-$jumbotron-height: 500px;
+/* Project specifics
+------------------------------------------------------------------------------*/
+.project-detail {
+	&.projects_sloan-digital main {
+		@include project(#961a1a, $white, 'project-sloan-digital-jumbotron-bg.png'); // (bg color, headline color, bg image)
+	}
+}
 
-.projects main {
+
+/* Project Detail (universal)
+------------------------------------------------------------------------------*/
+.project-detail main {
+	$jumbotron-height: 500px;
+
   h1 {
     font-size: $font-size-h1;
   }
