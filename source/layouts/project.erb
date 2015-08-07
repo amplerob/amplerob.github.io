@@ -50,15 +50,24 @@
       		</div>
         </div>
       	<div class="jumbotron-cta">
-      		<% if current_page.data.url %>
+
       		<div class="container">
       			<div class="row">
       				<div class="col-lg-7 col-lg-offset-1">
-      					<%= link_to 'Visit Site', current_page.data.url, class: 'btn btn-lg btn-default', target: '_blank' %>
+                <div class="project-topics">
+                  <h2>Project Topics</h2>
+                  <ul class="list-inline">
+                    <% current_page.data.topics.each do |topic| %>
+                      <li><%= topic %></li>
+                    <% end %>
+                  </ul>
+                </div>
+                <% if current_page.data.url %>
+      					  <%= link_to 'Visit Site', current_page.data.url, class: 'btn btn-lg btn-default', target: '_blank' %>
+                <% end %>
       				</div>
       			</div>
       		</div>
-      		<% end %>
       	</div>
       </div>
 
@@ -68,29 +77,9 @@
             <div class="project-examples">
               <%= yield %>
             </div>
-            <div class="project-meta">
-              <h2>My Contributions</h2>
-              <ul class="list-inline">
-                <% current_page.data.contributions.each do |contribution| %>
-                  <li><%= contribution %></li>
-                <% end %>
-              </ul>
-              <h2>Project Topics</h2>
-              <ul class="list-inline">
-                <% current_page.data.topics.each do |topic| %>
-                  <li><%= topic %></li>
-                <% end %>
-              </ul>
-
-            </div>
-
-
           </div>
         </div>
       </div>
-
-
-
     </main>
 
     <footer class="footer-global">

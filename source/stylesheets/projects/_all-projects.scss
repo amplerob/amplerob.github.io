@@ -1,0 +1,89 @@
+$jumbotron-height: 500px;
+
+.projects main {
+  h1 {
+    font-size: $font-size-h1;
+  }
+
+  h2 {
+		margin-bottom: 0;
+    font-size: $font-size-lg;
+    letter-spacing: -.02em;
+  }
+
+	.jumbotron {
+		position: relative;
+
+		@media (min-width: $screen-md-min) {
+			height: $jumbotron-height;
+		}
+
+		p {
+			font-size: $font-size-md;
+		}
+	}
+
+	.jumbotron-bg {
+		@media (min-width: $screen-md-min) {
+			height: $jumbotron-height;
+		}
+	}
+
+	.jumbotron-wrapper {
+		padding-bottom: 1em;
+		width: 100%;
+
+		@media (min-width: $screen-md-min) {
+			padding-bottom: 0;
+			position: absolute;
+			bottom: 1em;
+		}
+	}
+	.jumbotron-cta {
+		padding: 1em 0 $space-sm;
+
+		.btn {
+			@include button-size(.8em, 2.5em, $font-size-base, 1, 4px);
+			font-style: italic;
+
+			@media (max-width: $screen-xs-max) {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	.project-examples {
+		p {
+			margin: 1em 0 $space-sm;
+			font-size: $font-size-xs;
+
+			@media (min-width: $screen-md-min) {
+				margin-bottom: $space-md;
+			}
+		}
+	}
+
+	.project-topics {
+		margin-bottom: 1.2em;
+
+		li {
+			padding: 0;
+			text-transform: capitalize;
+
+			&:after {
+				content: ', ';
+			}
+
+			&:last-of-type {
+				&:after {
+					content: '';
+				}
+			}
+		}
+
+		ul {
+			margin: 0;
+		}
+	}
+}

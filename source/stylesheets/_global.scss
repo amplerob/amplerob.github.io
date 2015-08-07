@@ -135,16 +135,16 @@ hr {
   }
 }
 
-img {
-  margin-bottom: 16px;
-
-  @media (min-width: $screen-md-min) {
-    margin-bottom: 20px;
-  }
-  @media (min-width: $screen-lg-min) {
-    margin-bottom: 30px;
-  }
-}
+// img {
+//   margin-bottom: 16px;
+//
+//   @media (min-width: $screen-md-min) {
+//     margin-bottom: 20px;
+//   }
+//   @media (min-width: $screen-lg-min) {
+//     margin-bottom: 30px;
+//   }
+// }
 
 // main {
 //   margin: 10% 0;
