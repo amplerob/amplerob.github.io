@@ -25,19 +25,6 @@ body {
   line-height: $line-height-base;
   color: $font-color;
   -webkit-font-smoothing: antialiased;
-  //text-align: center;
-}
-
-form {
-  input,
-  input.text,
-  textarea,
-  textarea.textarea {
-    border: none;
-  }
-  label {
-    text-transform: uppercase;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,37 +65,6 @@ h2 {
   @media (max-width: $screen-xs-max) {
     font-size: $font-size-h2 * .85;
   }
-
-  small {
-    display: block;
-    font-family:  $font-family-sans;
-    font-size: 15px;
-    letter-spacing: .15em;
-    color: $red;
-
-    &:after,
-    &:before {
-      padding: 0 .25em;
-      content: "•";
-    }
-  }
-
-  .menu-content & {
-    margin: 0 0 2px 0;
-    padding: $space-sm 0 $space-xs;
-    font-size: $font-size-h2 * 1.15;
-    background: $black;
-    color: $tan;
-
-    img {
-      margin: -.2em 0 0 0;
-      @media (max-width: $screen-xs-max) {
-        width: 25px;
-        height: auto;
-      }
-
-    }
-  }
 }
 
 h3 {
@@ -135,24 +91,8 @@ hr {
   }
 }
 
-// img {
-//   margin-bottom: 16px;
-//
-//   @media (min-width: $screen-md-min) {
-//     margin-bottom: 20px;
-//   }
-//   @media (min-width: $screen-lg-min) {
-//     margin-bottom: 30px;
-//   }
-// }
-
-// main {
-//   margin: 10% 0;
-// }
-
 nav {
   font-family:  $font-family-sans;
-  //font-size: $font-size-md;
   letter-spacing: .05em;
   text-transform: uppercase;
 
@@ -161,8 +101,3 @@ nav {
     text-decoration: none;
   }
 }
-
-// p {
-//   margin-bottom: 1.75em;
-//   letter-spacing: .015em;
-// }
