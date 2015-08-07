@@ -1,0 +1,13 @@
+/* Project builder
+------------------------------------------------------------------------------*/
+// (project name, bg color, headline color)
+@include project('sloan-digital', #961a1a, $white);
+
+
+/* Project Landing
+------------------------------------------------------------------------------*/
+.projects {
+	.card-grid {
+	  @include card-grid(1,3,3,4);
+	}
+}

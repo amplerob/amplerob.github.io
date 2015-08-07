@@ -1,14 +1,3 @@
-/* Project specifics
-------------------------------------------------------------------------------*/
-.project-detail {
-	&.projects_sloan-digital main {
-		@include project(#961a1a, $white, 'project-sloan-digital-jumbotron-bg.png'); // (bg color, headline color, bg image)
-	}
-}
-
-
-/* Project Detail (universal)
-------------------------------------------------------------------------------*/
 .project-detail main {
 	$jumbotron-height: 500px;
 
@@ -18,8 +7,6 @@
 
   h2 {
 		margin-bottom: 0;
-    font-size: $font-size-lg;
-    letter-spacing: -.02em;
   }
 
 	.jumbotron {

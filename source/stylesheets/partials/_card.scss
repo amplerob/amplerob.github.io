@@ -1,0 +1,25 @@
+.card {
+	a {
+		h2 {
+			color: $link-color;
+			text-align: center;
+		}
+		&:hover {
+			h2 {
+				color: $link-color-hover;
+			}
+		}
+	}
+
+	li {
+		text-align: center;
+		font-size: $font-size-xs;
+		color: $black;
+	}
+
+	.thumbnail {
+		padding: 0;
+		border: none;
+		@include border-radius(0);
+	}
+}

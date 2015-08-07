@@ -4,16 +4,7 @@ a {
 
   &:hover {
     color: $link-color-hover;
-  }
-
-  h1 &,
-  h2 &,
-  h3 & {
     text-decoration: none;
-
-    &:hover {
-      text-decoration: none;
-    }
   }
 }
 
@@ -42,7 +33,7 @@ h1 {
   font-family:  $font-family-sans;
   font-size: $font-size-h1;
   line-height: .85;
-  letter-spacing: -.02em;
+  letter-spacing: -.01em;
   color: $gold;
 
   @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
@@ -54,9 +45,10 @@ h1 {
 }
 
 h2 {
+  margin: .4em 0 0;
   font-family:  $font-family-sans;
   font-size: $font-size-h2;
-  letter-spacing: .03em;
+  letter-spacing: -.02em;
   line-height: $line-height-sm;
 
   @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
@@ -65,13 +57,6 @@ h2 {
   @media (max-width: $screen-xs-max) {
     font-size: $font-size-h2 * .85;
   }
-}
-
-h3 {
-  font-size: $font-size-h3;
-  font-family: $font-family-sans;
-  letter-spacing: .05em;
-  color: $red;
 }
 
 hr {

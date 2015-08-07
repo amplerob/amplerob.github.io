@@ -1,3 +1,24 @@
+// Full width background image
+@mixin bg-image-card($image-path) {
+
+  height: 400px;
+
+  @media (min-width: $screen-sm-min){
+    height: 300px;
+  }
+  @media (min-width: $screen-md-min){
+    height: 400px;
+  }
+  @media (min-width: $screen-lg-min){
+    height: 350px;
+  }
+
+  background: image-url('#{$image-path}') no-repeat center center;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/#{$image-path}', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/#{$image-path}', sizingMethod='scale')";
+}
+
 // Retina bg images
 @mixin bg-image-retina($image-path, $type, $width, $height, $xpos, $ypos) {
   background-image: image-url($image-path + '.' + $type);
@@ -94,53 +115,65 @@
   background: image-url('#{$image-path}') no-repeat $vert-pos $horiz-pos;
 }
 
-// Create colors for a project page
-@mixin project($bg, $h1, $image-path) {
+// Creates project cards, project detail
+@mixin project($name, $bg, $h1) {
   $base-color: $bg;
   $base-color-dark: darken($base-color, 8%);
   $base-color-light: lighten($base-color, 10%);
   $base-color-saturate: saturate($base-color-light, 10%);
   $h1-color: $h1;
   $text-color: lighten($base-color, 55%);
-	background: $base-color;
 
-  h1, h2 {
-    color: $h1-color;
+  .projects .card.sloan-digital {
+		.project-img {
+			@include bg-image-card('projects-card-#{$name}.jpg');
+		}
+  	.thumbnail {
+  		border-bottom: 2px solid $base-color;
+  	}
   }
 
-  li, p {
-    color: $text-color;
-  }
+  .project-detail.projects_#{$name} main {
+  	background: $base-color;
 
-	.jumbotron {
-		@include gradient-vertical($base-color, $base-color-saturate, 20%, 100%);
-	}
+    h1, h2 {
+      color: $h1-color;
+    }
 
-	.jumbotron-bg {
-		@include jumbotron-bg('#{$image-path}', right, top);
-	}
+    li, p {
+      color: $text-color;
+    }
 
-	.jumbotron-cta {
-		background: $base-color;
+  	.jumbotron {
+  		@include gradient-vertical($base-color, $base-color-saturate, 20%, 100%);
+  	}
 
-		.btn {
-			@include button-variant($white, $base-color-saturate, transparent);
+  	.jumbotron-bg {
+  		@include jumbotron-bg('project-#{$name}-jumbotron-bg.png', right, top);
+  	}
 
-			&:active,
-			&:focus,
-			&:hover {
-				@include button-variant($white, $base-color, transparent);
-			}
-		}
-	}
+  	.jumbotron-cta {
+  		background: $base-color;
 
-  .project-examples {
-		p {
-			color: lighten($base-color, 40%);
-		}
-	}
+  		.btn {
+  			@include button-variant($white, $base-color-saturate, transparent);
 
-  .project-topics {
-    background: $base-color-saturate;
+  			&:active,
+  			&:focus,
+  			&:hover {
+  				@include button-variant($white, $base-color, transparent);
+  			}
+  		}
+  	}
+
+    .project-examples {
+  		p {
+  			color: lighten($base-color, 40%);
+  		}
+  	}
+
+    .project-topics {
+      background: $base-color-saturate;
+    }
   }
 }
