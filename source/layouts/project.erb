@@ -54,14 +54,6 @@
       		<div class="container">
       			<div class="row">
       				<div class="col-lg-7 col-lg-offset-1">
-                <div class="project-topics">
-                  <h2>Project Topics</h2>
-                  <ul class="list-inline">
-                    <% current_page.data.topics.each do |topic| %>
-                      <li><%= topic %></li>
-                    <% end %>
-                  </ul>
-                </div>
                 <% if current_page.data.url %>
       					  <%= link_to 'Visit Site', current_page.data.url, class: 'btn btn-lg btn-default', target: '_blank' %>
                 <% end %>
@@ -72,10 +64,35 @@
       </div>
 
       <div class="container">
-        <div class="row">
-          <div class="col-lg-10 col-lg-offset-1">
-            <div class="project-examples">
+        <div class="project-examples">
+          <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
               <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-bleed">
+        <div class="project-topics">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-lg-3 col-lg-offset-1">
+                <h2>My Part</h2>
+                <ul class="list-inline">
+                  <% current_page.data.roles.each do |role| %>
+                    <li><%= role %></li>
+                  <% end %>
+                </ul>
+              </div>
+              <div class="col-md-8 col-lg-8">
+                <h2>Project Topics</h2>
+                <ul class="list-inline">
+                  <% current_page.data.topics.each do |topic| %>
+                    <li><%= topic %></li>
+                  <% end %>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

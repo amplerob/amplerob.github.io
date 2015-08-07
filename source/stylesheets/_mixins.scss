@@ -42,11 +42,16 @@
 			}
 		}
 	}
+
   .project-examples {
 		p {
 			color: lighten($base-color, 40%);
 		}
 	}
+
+  .project-topics {
+    background: $base-color-saturate;
+  }
 }
 
 
