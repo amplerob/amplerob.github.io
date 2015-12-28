@@ -2,7 +2,20 @@
 	$jumbotron-height: 500px;
 
   h1 {
-    font-size: $font-size-h1;
+    //font-size: $font-size-h1;
+    font-size: 400%;
+    background-color: $white;
+    //display: inline-block;
+    letter-spacing: -.04em;
+    margin: 0;
+    padding: .2em;
+    text-align: center;
+
+    @media (min-width: $screen-sm-min) {
+      display: inline-block;
+			font-size: 10vw;
+      text-align: left;
+		}
   }
 
   h2 {
@@ -10,32 +23,67 @@
   }
 
 	.jumbotron {
+    padding: 5em 0;
 		position: relative;
+    background: transparent;
 
-		@media (min-width: $screen-md-min) {
-			height: $jumbotron-height;
-		}
+    //height: $jumbotron-height * .5;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 0;
+      height: $jumbotron-height * .8;
+    }
+    @media (min-width: $screen-md-min) {
+      height: $jumbotron-height;
+    }
 
 		p {
 			font-size: $font-size-md;
 		}
 	}
 
-	.jumbotron-bg {
-		@media (min-width: $screen-md-min) {
-			height: $jumbotron-height;
-		}
-	}
+
+  // .jumbotron-fg {
+  //   background: image-url('project-jumbotron-fg.png') no-repeat left top;
+	// 	@media (min-width: $screen-md-min) {
+	// 		height: 600px;
+	// 	}
+	// }
 
 	.jumbotron-wrapper {
-		padding-bottom: 1em;
+		//padding-bottom: 1em;
+    // position: absolute;
+    // top: 25%;
 		width: 100%;
 
-		@media (min-width: $screen-md-min) {
-			padding-bottom: 0;
-			position: absolute;
-			bottom: 1em;
+    @media (min-width: $screen-sm-min) {
+      position: absolute;
+      top: 25%;
 		}
+
+    // @media (max-width: $screen-sm-max) {
+    //   //padding-top: 3em;
+    // }
+		// @media (min-width: $screen-md-min) {
+		// 	position: absolute;
+    //   top: 20%;
+		// }
+
+    p {
+      color: $white;
+      font-family: $font-family-sans;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semi;
+      letter-spacing: .1em;
+      line-height: $line-height-md;
+      padding: 0 .75em;
+      text-transform: uppercase;
+
+      @media (max-width: $screen-xs-max) {
+        font-size: $font-size-xs;
+        text-align: center;
+      }
+    }
 	}
 	.jumbotron-cta {
 		padding: 1em 0 $space-xs;
@@ -53,9 +101,15 @@
 	}
 
 	.project-examples {
+    // margin-top: -50px;
+    //
+    // @media (min-width: $screen-sm-min) {
+    //   margin-top: -250px;
+    // }
+
 		p {
 			margin: 1em 0 $space-sm;
-			font-size: $font-size-xs;
+			font-size: $font-size-sm;
 
 			@media (min-width: $screen-md-min) {
 				margin-bottom: $space-md;

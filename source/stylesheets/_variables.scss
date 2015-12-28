@@ -19,6 +19,8 @@ $gold:										#d5bf5c;
 $tan:											#ebe8e1;
 $tan-dark: 								#cbc5b6;
 $tan-darker:	 						#ddd7c9;
+$purple:                  #b8bbcd;
+$bg-color:                #f4f4f4;
 
 // Links
 $link-color:							$blue;
@@ -28,8 +30,10 @@ $link-color-hover:				darken($blue, 10%);
 $font-color:              $black;
 $headline-color:          $black;
 
-$font-family-sans:        'franklin-gothic-urw-comp', sans-serif;
-$font-family-serif:       'ff-tisa-web-pro', Georgia, serif;
+$font-family-sans:        'brandon-grotesque', sans-serif;
+//$font-family-sans:        'franklin-gothic-urw-comp', sans-serif;
+$font-family-serif:       'kepler-std-caption', Georgia, serif;
+//$font-family-serif:       'ff-tisa-web-pro', Georgia, serif;
 $font-size-base:          16px;
 $font-size-lg:         		1.5em;
 $font-size-md:       		 	1.2em;
@@ -37,8 +41,10 @@ $font-size-sm:         		.9em;
 $font-size-xs:         		.8em;
 
 $font-weight-reg:         400; // $font-family-serif; $font-family-sans; $font-family-sans
+$font-weight-semi:        500;
 $font-weight-bold:        700; // $font-family-serif
 
+//$font-size-h1:            20vh;
 $font-size-h1:            floor(($font-size-base * 5.5));
 $font-size-h2:            floor(($font-size-base * 1.5));
 $font-size-h3:            ceil(($font-size-base * 1.3));

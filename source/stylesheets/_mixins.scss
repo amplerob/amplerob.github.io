@@ -110,19 +110,16 @@
   }
 }
 
-// Full width background image
-@mixin jumbotron-bg($image-path, $vert-pos, $horiz-pos) {
-  background: image-url('#{$image-path}') no-repeat $vert-pos $horiz-pos;
-}
+// // Full width background image
+// @mixin project-bg($image-path, $vert-pos, $horiz-pos) {
+//
+// }
 
 // Creates project cards, project detail
-@mixin project($name, $bg, $h1) {
-  $base-color: $bg;
+@mixin project($name, $base-color, $text-color) {
   $base-color-dark: darken($base-color, 8%);
   $base-color-light: lighten($base-color, 10%);
   $base-color-saturate: saturate($base-color-light, 10%);
-  $h1-color: $h1;
-  $text-color: lighten($base-color, 55%);
 
   .projects .card.sloan-digital {
 		.project-img {
@@ -134,46 +131,47 @@
   }
 
   .project-detail.projects_#{$name} main {
-  	background: $base-color;
+    background: image-url('project-#{$name}-bg.jpg') no-repeat right top;
+    background-attachment: fixed;
+    background-color: $base-color-dark;
+    background-size: auto;
 
-    h1, h2 {
-      color: $h1-color;
+    @media (min-width: $screen-sm-min){
+      background-size: cover;
+    }
+
+    h1 {
+      background-color: $white;
+      color: $base-color;
     }
 
     li, p {
       color: $text-color;
     }
 
-  	.jumbotron {
-  		@include gradient-vertical($base-color, $base-color-saturate, 20%, 100%);
-  	}
 
-  	.jumbotron-bg {
-  		@include jumbotron-bg('project-#{$name}-jumbotron-bg.png', right, top);
-  	}
-
-  	.jumbotron-cta {
-  		background: $base-color;
-
-  		.btn {
-  			@include button-variant($white, $base-color-saturate, transparent);
-
-  			&:active,
-  			&:focus,
-  			&:hover {
-  				@include button-variant($white, $base-color, transparent);
-  			}
-  		}
-  	}
+  	// .jumbotron-cta {
+  	// 	background: $base-color;
+    //
+  	// 	.btn {
+  	// 		@include button-variant($white, $base-color-saturate, transparent);
+    //
+  	// 		&:active,
+  	// 		&:focus,
+  	// 		&:hover {
+  	// 			@include button-variant($white, $base-color, transparent);
+  	// 		}
+  	// 	}
+  	// }
 
     .project-examples {
   		p {
-  			color: lighten($base-color, 40%);
+  			color: $text-color;
   		}
   	}
 
     .project-topics {
-      background: $base-color-saturate;
+      background: $base-color;
     }
   }
 }
