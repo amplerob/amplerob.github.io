@@ -2,10 +2,8 @@
 	$jumbotron-height: 500px;
 
   h1 {
-    //font-size: $font-size-h1;
-    font-size: 400%;
     background-color: $white;
-    //display: inline-block;
+    font-size: 400%;
     letter-spacing: -.04em;
     margin: 0;
     padding: .2em;
@@ -19,15 +17,16 @@
   }
 
   h2 {
-		margin-bottom: 0;
+    color: $white;
+    font-size: $font-size-h3;
+    letter-spacing: .05em;
+		margin: .2em 0;
   }
 
 	.jumbotron {
     padding: 5em 0;
 		position: relative;
     background: transparent;
-
-    //height: $jumbotron-height * .5;
 
     @media (min-width: $screen-sm-min) {
       padding: 0;
@@ -42,32 +41,13 @@
 		}
 	}
 
-
-  // .jumbotron-fg {
-  //   background: image-url('project-jumbotron-fg.png') no-repeat left top;
-	// 	@media (min-width: $screen-md-min) {
-	// 		height: 600px;
-	// 	}
-	// }
-
 	.jumbotron-wrapper {
-		//padding-bottom: 1em;
-    // position: absolute;
-    // top: 25%;
 		width: 100%;
 
     @media (min-width: $screen-sm-min) {
       position: absolute;
       top: 25%;
 		}
-
-    // @media (max-width: $screen-sm-max) {
-    //   //padding-top: 3em;
-    // }
-		// @media (min-width: $screen-md-min) {
-		// 	position: absolute;
-    //   top: 20%;
-		// }
 
     p {
       color: $white;
@@ -101,15 +81,9 @@
 	}
 
 	.project-examples {
-    // margin-top: -50px;
-    //
-    // @media (min-width: $screen-sm-min) {
-    //   margin-top: -250px;
-    // }
-
 		p {
-			margin: 1em 0 $space-sm;
 			font-size: $font-size-sm;
+      margin: 1em 0 $space-sm;
 
 			@media (min-width: $screen-md-min) {
 				margin-bottom: $space-md;
@@ -118,6 +92,17 @@
 	}
 
 	.project-topics {
-		padding: 1.2em 0 2em;
+		padding: 2em 0;
+
+    p {
+      font-size: $font-size-md;
+    }
+    ul {
+      margin-bottom: 2em;
+
+      li {
+        font-style: italic;
+      }
+    }
 	}
 }

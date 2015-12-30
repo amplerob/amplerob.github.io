@@ -29,12 +29,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin: .4em 0;
+  color: $tan-dark;
   font-family:  $font-family-sans;
   font-size: $font-size-h1;
   line-height: .85;
   letter-spacing: -.01em;
-  color: $tan-dark;
+  margin: .4em 0;
   text-transform: uppercase;
 
   @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
@@ -46,11 +46,12 @@ h1 {
 }
 
 h2 {
-  margin: .4em 0 0;
   font-family:  $font-family-sans;
   font-size: $font-size-h2;
   letter-spacing: -.02em;
   line-height: $line-height-sm;
+  margin: .4em 0 0;
+  text-transform: uppercase;
 
   @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
     font-size: $font-size-h2 * .9;
