@@ -121,7 +121,17 @@
   $base-color-light: lighten($base-color, 10%);
   $base-color-saturate: saturate($base-color-light, 10%);
 
-  .projects .card.sloan-digital {
+  .index .banner.#{$name} {
+    background: image-url('project-#{$name}-bg.jpg') no-repeat right 25%;
+    background-color: $base-color-dark;
+    border-left: 10px solid $base-color-light;
+
+    h2 {
+      color: $base-color;
+    }
+  }
+
+  .projects .card.#{$name} {
 		.project-img {
 			@include bg-image-card('projects-card-#{$name}.jpg');
 		}

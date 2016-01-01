@@ -1,15 +1,23 @@
 ---
-title: Web Design, Front-End Dev, Branding
+title: UX, UI, Web Design, Front-End Dev &amp; Branding
 pageable: false
 per_page: 4
 press: true
 ---
 
 <div class="container-fluid-bleed">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-sm-offset-3">
-      <h1>How do!</h1>
-      <p>This is the start of something. What? I'm not sure yet but it'll be <em>something.</em></p>
+  <h1 class="sr-only"><%= current_page.data.title %></h1>
+  <% data.projects.each do |i, project| %>
+    <% if project.home %>
+    <a href="/projects/<%= project.name %>.html">
+      <div class="row">
+        <div class="banner <%= project.name %>">
+            <div class="col-md-8">
+              <h2><%= project.title %></h2>
+            </div>
+          </div>
+        </a>
     </div>
-  </div>
+    <% end %>
+  <% end %>
 </div>

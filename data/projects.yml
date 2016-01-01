@@ -4,8 +4,11 @@ sloanDigital:
   categories:
     - Branding
     - Website
-3goats:
-  title: 3 Goats Coffee Co.
-  name: '3-goats'
+  home: true
+goats:
+  title: 3 Goats
+  name: three-goats
   categories:
     - Branding
+    - Website
+  home: true
