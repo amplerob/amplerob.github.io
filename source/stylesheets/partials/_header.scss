@@ -53,7 +53,7 @@
   .navbar-collapse {
     border: none;
     box-shadow: none;
-    margin: 0 -15px;
+    margin: 0;
     padding: 0;
 
     &.collapsing,
@@ -97,6 +97,6 @@
 
 .navbar-right {
   @media (min-width: $screen-sm-min) {
-    margin-right: 15px;
+    margin-right: 0;
   }
 }

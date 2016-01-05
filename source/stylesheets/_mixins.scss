@@ -117,9 +117,9 @@
 
 // Creates project cards, project detail
 @mixin project($name, $base-color, $text-color) {
-  $base-color-dark: darken($base-color, 8%);
+  $base-color-dark: darken($base-color, 10%);
   $base-color-light: lighten($base-color, 10%);
-  $base-color-saturate: saturate($base-color-light, 10%);
+  $base-color-saturate: saturate($base-color-light, 20%);
 
   .index .banner.#{$name} {
     background: image-url('project-#{$name}-bg.jpg') no-repeat right 25%;
@@ -140,48 +140,53 @@
   	}
   }
 
-  .project-detail.projects_#{$name} main {
-    background: image-url('project-#{$name}-bg.jpg') no-repeat right top;
-    background-attachment: fixed;
-    background-color: $base-color-dark;
-    background-size: auto;
+  .project-detail.projects_#{$name} {
+    background-color: $base-color;
 
-    @media (min-width: $screen-sm-min){
-      background-size: cover;
-    }
+    main {
+      h1 {
+        background-color: $white;
+        color: $base-color;
+      }
 
-    h1 {
-      background-color: $white;
-      color: $base-color;
-    }
-
-    li, p {
-      color: $text-color;
-    }
+      li, p {
+        color: $text-color;
+      }
 
 
-  	// .jumbotron-cta {
-  	// 	background: $base-color;
-    //
-  	// 	.btn {
-  	// 		@include button-variant($white, $base-color-saturate, transparent);
-    //
-  	// 		&:active,
-  	// 		&:focus,
-  	// 		&:hover {
-  	// 			@include button-variant($white, $base-color, transparent);
-  	// 		}
-  	// 	}
-  	// }
+    	// .jumbotron-cta {
+    	// 	background: $base-color;
+      //
+    	// 	.btn {
+    	// 		@include button-variant($white, $base-color-saturate, transparent);
+      //
+    	// 		&:active,
+    	// 		&:focus,
+    	// 		&:hover {
+    	// 			@include button-variant($white, $base-color, transparent);
+    	// 		}
+    	// 	}
+    	// }
 
-    .project-examples {
-  		p {
-  			color: $text-color;
-  		}
-  	}
+      .project-bg .bg {
+        background: image-url('project-#{$name}-bg.jpg') no-repeat right top $base-color;
+      }
 
-    .project-topics {
-      background: $base-color;
+      .project-examples {
+    		p {
+    			color: $text-color;
+    		}
+    	}
+
+      .project-topics {
+        background: $base-color-dark;
+
+        h2 {
+          color: $base-color-saturate;
+        }
+      }
     }
   }
+
+
 }

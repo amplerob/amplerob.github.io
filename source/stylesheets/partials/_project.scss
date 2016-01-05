@@ -1,22 +1,34 @@
 /* Project builder
 ------------------------------------------------------------------------------*/
 // (project name, color, text color)
-@include project('three-goats', #2a2a2a, $white);
-@include project('sloan-digital', #c12525, $white);
+@include project('three-goats', #d4d4d4, $text-color);
+@include project('sloan-digital', #9d1f17, $white);
 
 
 /* Project Landing
 ------------------------------------------------------------------------------*/
-.projects {
-  main {
-    padding: $space-md 0;
-    background: image-url('projects-bg.jpg') no-repeat right top $bg-color;
-    background-attachment: fixed;
-  }
+.projects_index {
+  background: image-url('projects-bg.jpg') no-repeat right top $bg-color;
+  background-attachment: fixed;
 
 	.card-grid-projects {
 	  @include card-grid(1,3,3,4);
 	}
+
+  .card {
+    // .project-img {
+    //   -webkit-filter: blur(0);
+    //   -webkit-transition: all 0.5s;
+    // }
+    &:hover {
+      // .project-img {
+      //   -webkit-filter: blur(1px);
+      // }
+      .thumbnail {
+    		border-bottom-color: $purple;
+    	}
+    }
+  }
 
 	.project-list {
 		margin: 0;
