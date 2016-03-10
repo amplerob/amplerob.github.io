@@ -1,6 +1,7 @@
 a {
   color: $link-color;
   text-decoration: none;
+  @include animate(color, .75s, .05s);
 
   &:hover {
     color: $link-color-hover;

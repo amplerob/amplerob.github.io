@@ -1,3 +1,9 @@
+@mixin animate($property, $duration, $delay) {
+  -webkit-transition: $property $duration $delay;
+  -moz-transition:    $property $duration $delay;
+  -o-transition:      $property $duration $delay;
+  transition:         $property $duration $delay;
+}
 // Full width background image
 @mixin bg-image-card($image-path) {
 

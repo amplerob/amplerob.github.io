@@ -1,12 +1,13 @@
 .footer-about {
+  margin-top: -130px;
+
   big {
-   font-style: italic;
    font-weight: $font-weight-bold;
   }
 
   .img-circle {
     border: 7px solid $white;
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
   }
 }
 
@@ -19,24 +20,25 @@
 .footer-links {
   background: $white;
   margin-bottom: $space-md;
-  padding: $space-sm;
+  padding: $space-md $space-sm 110px;
 
   a {
-    @include border-radius(2px);
+    background-color: transparent;
     color: #a6a298;
     display: inline-block;
     font-size: .8em;
     font-weight: $font-weight-semi;
     padding: .8em 1.2em;
+    @include border-radius(2px);
 
     &.active,
     &:focus {
-      background: $purple;
+      background-color: $purple;
       color: $white;
     }
     &:hover {
-      background: lighten($purple,10);
-      color: $black;
+      background-color: lighten($purple,10);
+      color: $text-color;
     }
   }
   ul {

@@ -16,16 +16,32 @@
 	}
 
   .card {
-    // .project-img {
-    //   -webkit-filter: blur(0);
-    //   -webkit-transition: all 0.5s;
-    // }
+    .caption {
+      border-top: 1px solid transparent;
+      @include animate(border-top-color, .5s, .05s);
+    }
+    .project-img {
+      -webkit-filter: contrast(100%);
+    }
+    .thumbnail {
+      box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0);
+
+      @include animate(border-bottom-color, .5s, .05s);
+      @include animate(box-shadow, .5s, .05s);
+    }
     &:hover {
-      // .project-img {
-      //   -webkit-filter: blur(1px);
-      // }
+      border-color: $purple;
+
+      .caption {
+        border-top: 1px solid rgba(184, 187, 205,.7);
+      }
+      .project-img {
+        -webkit-filter: contrast(130%);
+      }
+
       .thumbnail {
-    		border-bottom-color: $purple;
+    		//border-bottom-color: $purple;
+        box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.1);
     	}
     }
   }
