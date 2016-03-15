@@ -30,13 +30,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: $teal;
-  font-family:  $font-family-sans;
+  color: $text-color;
+  font-family:  $font-family-serif;
   font-size: $font-size-h1;
   line-height: .85;
   letter-spacing: -.01em;
   margin: .4em 0;
-  text-transform: uppercase;
+  //text-transform: uppercase;
 
   @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
     font-size: $font-size-h1 * .85;
@@ -49,7 +49,7 @@ h1 {
 h2 {
   font-family:  $font-family-sans;
   font-size: $font-size-h2;
-  letter-spacing: -.02em;
+  letter-spacing: .03em;
   line-height: $line-height-sm;
   margin: .4em 0 0;
   text-transform: uppercase;

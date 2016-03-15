@@ -30,70 +30,39 @@
     </header>
 
     <main>
-      <div class="project-bg">
-
-        <div class="bg"></div>
-        <div class="bg bg-blur"></div>
+      <div class="project-header" id="project-header">
+        <p id="responsive_headline"><%= current_page.data.description %></p>
+        <h1><%= current_page.data.title %></h1>
       </div>
-      <div class="project-content">
-        <div class="container-bleed">
-          <div class="jumbotron">
-        		<div class="jumbotron-bg">
-        			<div class="jumbotron-wrapper">
-                <p><%= current_page.data.description %></p>
-        				<h1><%= current_page.data.title %></h1>
-        			</div>
-        		</div>
-          </div>
-        	<!--
-          <div class="jumbotron-cta">
-        		<div class="container">
-        			<div class="row">
-        				<div class="col-lg-7 col-lg-offset-1">
-                  <% if current_page.data.url %>
-        					  <%= link_to 'Visit Site', current_page.data.url, class: 'btn btn-lg btn-default', target: '_blank' %>
-                  <% end %>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-          -->
-        </div>
-
+      <div class="project-content" id="project-content">
         <div class="container">
           <div class="project-examples">
             <%= yield %>
           </div>
-        </div>
-
-        <div class="container-bleed">
           <div class="project-topics">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <h2>My Part</h2>
-                  <ul class="list-inline project-list">
-                    <% current_page.data.roles.each do |role| %>
-                      <li><%= role %></li>
-                    <% end %>
-                  </ul>
-                  <h2>Project Topics</h2>
-                  <ul class="list-inline project-list">
-                    <% current_page.data.topics.each do |topic| %>
-                      <li><%= topic %></li>
-                    <% end %>
-                  </ul>
-                </div>
-                <div class="col-md-7 col-md-offset-1">
-                  <h2>Of Note</h2>
-                  <p><%= current_page.data.note %></p>
-                </div>
+            <div class="row">
+              <div class="col-md-3">
+                <h2>My Part</h2>
+                <ul class="list-inline project-list">
+                  <% current_page.data.roles.each do |role| %>
+                    <li><%= role %></li>
+                  <% end %>
+                </ul>
+                <h2>Project Topics</h2>
+                <ul class="list-inline project-list">
+                  <% current_page.data.topics.each do |topic| %>
+                    <li><%= topic %></li>
+                  <% end %>
+                </ul>
+              </div>
+              <div class="col-md-8 col-md-offset-1">
+                <h2>Of Note</h2>
+                <p><%= current_page.data.note %></p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </main>
 
     <footer class="footer-global">
@@ -102,3 +71,7 @@
 
   </body>
 </html>
+
+<!-- <script>
+  jQuery("#responsive_headline").fitText(0.8);
+</script> -->

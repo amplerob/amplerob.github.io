@@ -1,3 +1,10 @@
+three-goats:
+  title: 3 Goats
+  name: three-goats
+  categories:
+    - Branding
+    - Website
+  home: true
 sloanDigital:
   title: Sloan Digital
   name: sloan-digital
@@ -5,9 +12,9 @@ sloanDigital:
     - Branding
     - Website
   home: true
-goats:
-  title: 3 Goats
-  name: three-goats
+hickory-docks:
+  title: Hickory Docks
+  name: hickory-docks
   categories:
     - Branding
     - Website

@@ -16,7 +16,7 @@
     height: 400px;
   }
   @media (min-width: $screen-lg-min){
-    height: 350px;
+    height: 500px;
   }
 
   background: image-url('#{$image-path}') no-repeat center center;
@@ -122,10 +122,12 @@
 // }
 
 // Creates project cards, project detail
-@mixin project($name, $base-color, $text-color) {
-  $base-color-dark: darken($base-color, 10%);
+@mixin project($name, $base-color, $headline-color, $text-color) {
+  $base-color-darker: darken($base-color, 22%);
+  $base-color-dark: darken($base-color, 15%);
   $base-color-light: lighten($base-color, 10%);
   $base-color-saturate: saturate($base-color-light, 20%);
+  $base-color-desaturate: desaturate($base-color, 15%);
 
   .index .banner.#{$name} {
     background: image-url('project-#{$name}-bg.jpg') no-repeat right 25%;
@@ -139,7 +141,8 @@
 
   .projects .card.#{$name} {
 		.project-img {
-			@include bg-image-card('projects-card-#{$name}.jpg');
+			//@include bg-image-card('projects-card-#{$name}.jpg');
+      @include bg-image-card('project-#{$name}-1.jpg');
 		}
   	.thumbnail {
   		border-bottom: 2px solid $base-color;
@@ -150,32 +153,29 @@
     background-color: $base-color;
 
     main {
-      h1 {
-        background-color: $white;
-        color: $base-color;
+      .project-content {
+        //background-color: rgba($base-color-light, 0.85);
+        background-color: $base-color-light;
       }
 
-      li, p {
-        color: $text-color;
+      .project-examples {
+        figcaption h5 {
+          background-color: $base-color-light;
+          color: $text-color;
+        }
       }
 
-
-    	// .jumbotron-cta {
-    	// 	background: $base-color;
-      //
-    	// 	.btn {
-    	// 		@include button-variant($white, $base-color-saturate, transparent);
-      //
-    	// 		&:active,
-    	// 		&:focus,
-    	// 		&:hover {
-    	// 			@include button-variant($white, $base-color, transparent);
-    	// 		}
-    	// 	}
-    	// }
-
-      .project-bg .bg {
-        background: image-url('project-#{$name}-bg.jpg') no-repeat right top $base-color;
+      .project-header {
+        h1 {
+          background-color: $headline-color;
+          border-color: transparent;
+          //border-bottom-color: rgba($text-color, 0.25);
+          //border-top-color: rgba($text-color, 0.25);color: $text-color;
+          color: $base-color-light;
+        }
+        p {
+          color: $headline-color;
+        }
       }
 
       .project-examples {
@@ -190,9 +190,10 @@
         h2 {
           color: $base-color-saturate;
         }
+        li, p {
+          color: rgba($text-color, 0.8);
+        }
       }
     }
   }
-
-
 }

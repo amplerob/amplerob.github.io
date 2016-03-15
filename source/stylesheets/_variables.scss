@@ -6,7 +6,7 @@
 // --------------------------------------------------
 
 // Grays
-$black:                   #928e85;
+$black:                   rgba(#292726, 0.8);
 $black-dark:							#78756d;
 $black-darker:						#66635d;
 $black-light:							#aba69b;
@@ -39,7 +39,7 @@ $font-size-base:          16px;
 $font-size-lg:         		1.5em;
 $font-size-md:       		 	1.1em;
 $font-size-sm:         		1em;
-$font-size-xs:         		.9em;
+$font-size-xs:         		.8em;
 
 $font-weight-reg:         400; // $font-family-serif; $font-family-sans; $font-family-sans
 $font-weight-semi:        500;
@@ -47,7 +47,7 @@ $font-weight-bold:        700; // $font-family-serif
 
 //$font-size-h1:            20vh;
 $font-size-h1:            floor(($font-size-base * 5.5));
-$font-size-h2:            floor(($font-size-base * 1.5));
+$font-size-h2:            floor(($font-size-base * 1.3));
 $font-size-h3:            ceil(($font-size-base * 1.3));
 $font-size-h4:            ceil(($font-size-base * 1.15));
 $font-size-h5:            $font-size-base;

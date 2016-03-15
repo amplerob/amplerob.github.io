@@ -3,7 +3,9 @@ title: "Projects"
 ---
 
 <div class="container">
-  <h1>Projects</h1>
+  <div class="project-header" id="project-header">
+    <h1 id="responsive_headline"><%= current_page.data.title %></h1>
+  </div>
   <div class="card-grid card-grid-projects">
   	<div class="row">
       <% data.projects.each do |i, project| %>
