@@ -16,7 +16,7 @@
     height: 400px;
   }
   @media (min-width: $screen-lg-min){
-    height: 500px;
+    height: 450px;
   }
 
   background: image-url('#{$image-path}') no-repeat center center;
@@ -122,59 +122,78 @@
 // }
 
 // Creates project cards, project detail
-@mixin project($name, $base-color, $headline-color, $text-color) {
+@mixin project($name, $base-color, $header-color, $text-color) {
   $base-color-darker: darken($base-color, 22%);
   $base-color-dark: darken($base-color, 15%);
   $base-color-light: lighten($base-color, 10%);
   $base-color-saturate: saturate($base-color-light, 20%);
   $base-color-desaturate: desaturate($base-color, 15%);
 
-  .index .banner.#{$name} {
-    background: image-url('project-#{$name}-bg.jpg') no-repeat right 25%;
-    background-color: $base-color-dark;
-    border-left: 10px solid $base-color-light;
+  // .index .banner.#{$name} {
+  //   background: image-url('project-#{$name}-bg.jpg') no-repeat right 25%;
+  //   background-color: $base-color-dark;
+  //   border-left: 10px solid $base-color-light;
+  //
+  //   h2 {
+  //     color: $base-color;
+  //   }
+  // }
 
-    h2 {
-      color: $base-color;
-    }
-  }
 
+
+  .index .card.#{$name},
   .projects .card.#{$name} {
+    a {
+  		h2 {
+  			color: $header-color;
+  		}
+  		&:hover {
+  			h2 {
+          color: saturate($header-color, 50%);
+  				//color: $gray-light;
+  			}
+  		}
+  	}
+
 		.project-img {
 			//@include bg-image-card('projects-card-#{$name}.jpg');
       @include bg-image-card('project-#{$name}-1.jpg');
 		}
+    // .caption {
+    //   li {
+    //     color: $text-color;
+    //   }
+    // }
   	.thumbnail {
-  		border-bottom: 2px solid $base-color;
+  		border-bottom: 2px solid $header-color;
   	}
   }
 
+
+
   .project-detail.projects_#{$name} {
-    background-color: $base-color;
+    background-color: $header-color;
 
     main {
       .project-content {
-        //background-color: rgba($base-color-light, 0.85);
         background-color: $base-color-light;
       }
 
       .project-examples {
         figcaption h5 {
-          background-color: $base-color-light;
+          background-color: rgba($base-color-light, 0.85);
           color: $text-color;
         }
       }
 
       .project-header {
+        @include gradient-vertical($header-color, darken($header-color, 3%), 0%, 80%);
         h1 {
-          background-color: $headline-color;
-          border-color: transparent;
-          //border-bottom-color: rgba($text-color, 0.25);
-          //border-top-color: rgba($text-color, 0.25);color: $text-color;
-          color: $base-color-light;
+          background-color: darken($header-color, 6%);
+          color: rgba($white, 0.6);
         }
         p {
-          color: $headline-color;
+          color: $white;
         }
       }
 
@@ -195,5 +214,39 @@
         }
       }
     }
+
+    .navbar-default {
+      background-color: rgba($header-color, 0.92);
+
+      .navbar-header a.navbar-brand {
+        color: rgba($white, 0.4);
+
+        em {
+          color: rgba($white, 0.7);
+        }
+
+        &:hover,
+        &:hover em {
+          color: $white;
+        }
+      }
+
+      .navbar-nav li a {
+        color: $white;
+
+        &.active,
+        &:focus {
+          color: $header-color;
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+
+
+
+
   }
 }

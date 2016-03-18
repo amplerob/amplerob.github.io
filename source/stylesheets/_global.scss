@@ -34,8 +34,9 @@ h1 {
   font-family:  $font-family-serif;
   font-size: $font-size-h1;
   line-height: .85;
-  letter-spacing: -.01em;
-  margin: .4em 0;
+  letter-spacing: -0.06em;
+  margin: .6em 0 .4em 0;
+  text-align: center;
   //text-transform: uppercase;
 
   @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
@@ -83,6 +84,12 @@ hr {
     }
   }
 }
+
+// main {
+//   @media (min-width: $screen-sm-min) {
+//     padding-top: 60px;
+//   }
+// }
 
 nav {
   font-family:  $font-family-sans;

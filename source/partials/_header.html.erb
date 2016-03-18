@@ -9,9 +9,8 @@
 
   <div class="collapse navbar-collapse" id="navbar">
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="/" class="<%= 'active' if current_page.path =~ /^index/ %>">Home</a></li>
-      <li><a href="/projects" class="<%= 'active' if current_page.path =~ /^project/ %>">Projects</a></li>
-      <li><a href="/thoughts" class="<%= 'active' if current_page.path =~ /^thoughts/ %>">Thoughts</a></li>
+      <li><a href="/" class="<%= 'active' if current_page.path =~ /^index || ^projects/ %>">Projects</a></li>
+      <li><a href="/journal" class="<%= 'active' if current_page.path =~ /^journal/ %>">Journal</a></li>
     </ul>
   </div>
 </div>

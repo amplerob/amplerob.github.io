@@ -1,23 +1,30 @@
 ---
-title: UX, UI, Web Design, Front-End Dev &amp; Branding
-pageable: false
-per_page: 4
-press: true
+title: "Projects"
 ---
 
-<div class="container-fluid-bleed">
-  <h1 class="sr-only"><%= current_page.data.title %></h1>
-  <% data.projects.each do |i, project| %>
-    <% if project.home %>
-    <a href="/projects/<%= project.name %>.html">
-      <div class="row">
-        <div class="banner <%= project.name %>">
-            <div class="col-md-8">
+<div class="container">
+  <div class="project-header" id="project-header">
+    <h1><%= current_page.data.title %></h1>
+  </div>
+  <div class="card-grid card-grid-projects">
+  	<div class="row">
+      <% data.projects.each do |i, project| %>
+        <div class="card <%= project.name %>">
+          <a href="/projects/<%= project.name %>.html">
+          <div class="thumbnail">
+            <div class="project-img"></div>
+            <div class="caption">
               <h2><%= project.title %></h2>
+              <ul class="list-inline project-list text-center">
+                <% project.categories.each do |category| %>
+                  <li><%= category %></li>
+                <% end %>
+              </ul>
             </div>
           </div>
-        </a>
-    </div>
-    <% end %>
-  <% end %>
+          </a>
+        </div>
+      <% end %>
+  	</div>
+  </div>
 </div>

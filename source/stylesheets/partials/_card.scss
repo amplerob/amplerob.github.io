@@ -1,29 +1,20 @@
 .card {
 	a {
 		h2 {
-			color: $link-color;
+			//color: $link-color;
       font-family:  $font-family-serif;
       font-size: $font-size-h2;
-      letter-spacing: .01em;
+      letter-spacing: -.01em;
       line-height: $line-height-sm;
-      margin: .4em 0 0;
+      margin: .6em 0 0;
       text-align: center;
       text-transform: none;
 		}
-		&:hover {
-			h2 {
-				color: $link-color-hover;
-			}
-		}
-	}
-
-	li {
-    color: $text-color;
-    font-family:  $font-family-sans;
-		font-size: $font-size-xs;
-    letter-spacing: .03em;
-    text-align: center;
-    text-transform: uppercase;
+		// &:hover {
+		// 	h2 {
+		// 		color: $gray-light;
+		// 	}
+		// }
 	}
 
 	.thumbnail {
@@ -39,7 +30,17 @@
 		}
 
 		.caption {
-			padding-bottom: $space-xs;
+			padding-bottom: .8em;
+
+      li {
+        color: $black-light;
+        font-family:  $font-family-sans;
+    		font-size: .6em;
+        font-weight: $font-weight-semi;
+        letter-spacing: .06em;
+        text-align: center;
+        text-transform: uppercase;
+    	}
 		}
 	}
 }

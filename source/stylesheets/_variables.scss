@@ -7,10 +7,10 @@
 
 // Grays
 $black:                   rgba(#292726, 0.8);
-$black-dark:							#78756d;
-$black-darker:						#66635d;
-$black-light:							#aba69b;
-$black-lighter:				  	#bfbaae;
+$black-light:							#92939A;
+$black-lighter:				  	lighten($black-light, 15%);
+$black-dark:							darken($black-light, 5%);
+$black-darker:						darken($black-light, 10%);
 $white:                   #fff;
 
 // Colors
