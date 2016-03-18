@@ -1,3 +1,9 @@
+family-crest:
+  title: Family Crest
+  name: family-crest
+  categories:
+    - Artwork
+  home: true
 three-goats:
   title: 3 Goats
   name: three-goats

@@ -14,7 +14,7 @@ $black-darker:						darken($black-light, 10%);
 $white:                   #fff;
 
 // Colors
-$blue:										#7b8e9a;
+$blue:										#6187A0;
 $gold:										#d5bf5c;
 $tan:											#ebe8e1;
 $tan-dark: 								#cbc5b6;
@@ -25,7 +25,7 @@ $bg-color:                #f4f4f4;
 
 // Links
 $link-color:							$blue;
-$link-color-hover:				darken($blue, 10%);
+$link-color-hover:				saturate($blue, 40%);
 
 // Typography
 $font-color:              $black;
@@ -36,7 +36,7 @@ $font-family-sans:        'brandon-grotesque', sans-serif;
 $font-family-serif:       'kepler-std-caption', Georgia, serif;
 //$font-family-serif:       'ff-tisa-web-pro', Georgia, serif;
 $font-size-base:          16px;
-$font-size-lg:         		1.5em;
+$font-size-lg:         		3em;
 $font-size-md:       		 	1.1em;
 $font-size-sm:         		1em;
 $font-size-xs:         		.8em;

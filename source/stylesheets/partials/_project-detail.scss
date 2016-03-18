@@ -34,7 +34,7 @@
   }
 
   .project-content {
-    padding-top: 20px;
+    padding: 20px 0 $space-xl;
     position: relative;
   }
 
@@ -83,6 +83,11 @@
 	.project-topics {
     margin-bottom: 20px;
 		padding: $space-xl;
+
+    @media (max-width: $screen-xs-max) {
+      padding: $space-xl $space-lg;
+      text-align: center;
+    }
 
     h2 {
       font-size: $font-size-h2;

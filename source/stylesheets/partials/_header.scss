@@ -35,9 +35,6 @@
   border-radius: 0;
 
   .navbar-nav {
-    // @media (max-width: $screen-xs-max) {
-    //   margin: 0;
-    // }
     margin: 11px 0;
 
     li {
@@ -53,12 +50,11 @@
         font-weight: $font-weight-semi;
         margin: 0 .4em 0 0;
         padding: .8em 1.2em;
-        //padding: .8em 1.2em;
-        //@include border-radius(2px);
 
         @media (max-width: $screen-xs-max) {
           display: block;
-          padding: 2em 0;
+          margin: .4em 0;
+          padding: .8em 0;
           text-align: center;
         }
 
@@ -79,47 +75,30 @@
   }
 
   .navbar-collapse {
-    border: none;
-    box-shadow: none;
+    border: none;    
     margin: 0;
-    padding: 0;
 
-    &.collapsing,
-    &.in  {
-      border-top: 1px solid $border-color;
+    @media (max-width: $screen-xs-max) {
+      background-color: darken($bg-color, 6%);
+      box-shadow: 0 4px 4px 2px rgba(0, 0, 0, .2);
     }
   }
 
   .navbar-toggle {
-    @include border-radius(2px);
-    border: none;
-    color: #a6a298;
-    display: inline-block;
+    color: rgba($black, 0.7);
     font-size: .8em;
-    font-weight: $font-weight-semi;
-    letter-spacing: .05em;
-    margin: 10px;
-    padding: 10px;
+    font-weight: $font-weight-bold;
+    margin: 11px .4em 0 0;
+    padding: .8em 1.2em;
+    border: none;
 
     &:focus, &:hover {
-      background: $teal;
-      color: $white;
+      color: $black;
     }
 
     .fa-lg {
       vertical-align: -25%;
     }
-  }
-}
-
-.navbar-logo {
-  @include bg-image-retina('logo', png, 225px, 75px, 0, 0);
-  display: block;
-  height: 75px;
-  width: 225px;
-
-  @media (max-width: $screen-xs-max) {
-    margin: -25px 0 0 -30px;
   }
 }
 
