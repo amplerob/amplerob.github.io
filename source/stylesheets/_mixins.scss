@@ -122,12 +122,13 @@
 // }
 
 // Creates project cards, project detail
-@mixin project($name, $base-color, $header-color, $text-color) {
+@mixin project($name, $base-color, $header-color) {
   $base-color-darker: darken($base-color, 22%);
   $base-color-dark: darken($base-color, 15%);
   $base-color-light: lighten($base-color, 10%);
   $base-color-saturate: saturate($base-color-light, 20%);
   $base-color-desaturate: desaturate($base-color, 15%);
+  $text-color: $black;
 
 
   .index .card.#{$name},
@@ -156,7 +157,7 @@
 
     main {
       .project-content {
-        background-color: $base-color-light;
+        background-color: $base-color;
       }
 
       .project-examples {
@@ -196,10 +197,12 @@
     }
 
     .navbar-default {
-      background-color: rgba($header-color, 0.92);
+      background-color: $header-color;
 
       .navbar-collapse {
-        background-color: darken($header-color, 6%);
+        @media (max-width: $screen-xs-max) {
+          background-color: darken($header-color, 6%);
+        }
       }
 
       .navbar-header a.navbar-brand {

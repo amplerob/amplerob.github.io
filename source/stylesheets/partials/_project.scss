@@ -1,10 +1,10 @@
 /* Project builder
 ------------------------------------------------------------------------------*/
 // (project name, bg color, header color, text color)
-@include project('family-crest', #8fd6ba, #29b77f, $black);
-@include project('three-goats', #e0dcd6, #675C4D, #292726);
-@include project('sloan-digital', #DED8D8, #DA433A, $white);
-@include project('hickory-docks', #8acab9, #1BAE84, #292726);
+@include project('family-crest', #8fd6ba, #29b77f);
+@include project('three-goats', #d0c9c0, #675C4D);
+@include project('sloan-digital', #DED8D8, #DA433A);
+@include project('hickory-docks', #8acab9, #1BAE84);
 
 
 /* Project Landing

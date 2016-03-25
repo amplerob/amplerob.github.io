@@ -30,7 +30,7 @@
 .navbar-default {
   margin: 0;
   padding: 0 0 2px 0;
-  background: rgba($bg-color, 0.92);
+  background: $bg-color;
   border: none;
   border-radius: 0;
 
@@ -75,7 +75,7 @@
   }
 
   .navbar-collapse {
-    border: none;    
+    border: none;
     margin: 0;
 
     @media (max-width: $screen-xs-max) {

@@ -1,12 +1,11 @@
 .footer-global {
   background-color: $white;
   margin-top: 5px;
-  padding: $space-xl 0;
+  padding: 100px 0;
   position: relative;
 
   @media (max-width: $screen-xs-max) {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: $space-xl 10px;
   }
 
   big {
