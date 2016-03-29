@@ -4,6 +4,3 @@ var projectHeader = function () {
   var height = document.getElementById("project-header").offsetHeight;
   document.getElementById("project-content").style.marginTop = (height + 65) + 'px';
 };
-
-$(document).ready(projectHeader);
-$(window).resize(projectHeader);
