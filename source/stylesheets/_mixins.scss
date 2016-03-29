@@ -153,16 +153,16 @@
   }
 
   .project-detail.projects_#{$name} {
-    background-color: $header-color;
+    background-color: $base-color;
 
     main {
       .project-content {
-        background-color: $base-color;
+        background-color: rgba($base-color, 1);
       }
 
       .project-examples {
         figcaption h5 {
-          background-color: rgba($base-color-light, 0.85);
+          background-color: $base-color-light;
           color: $text-color;
         }
       }
@@ -194,6 +194,10 @@
           color: rgba($text-color, 0.8);
         }
       }
+    }
+
+    .footer-global {
+      border-top-color: $header-color;
     }
 
     .navbar-default {
