@@ -1,0 +1,54 @@
+.menu-content {
+	margin-bottom: $space-xl;
+
+	@media (max-width: $screen-sm-max) {
+		margin-bottom: $space-lg;
+	}
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: $space-md;
+	}
+
+	.list-unstyled li {
+		margin: $space-xs 0 $space-md;
+	}
+}
+
+.menu-description {
+	display: inline;
+	text-transform: lowercase;
+
+	&::after {
+		white-space: pre;
+		content: "...";
+	}
+}
+
+.menu-group {
+	padding: $space-sm;
+	font-size: $font-size-medium;
+	border: 1px solid $border-color;
+
+	.menu-feature & {
+		background: $gray-darker;
+		background: rgba(65, 59, 51, .85);
+		border-color: transparent;
+		color: $tan;
+	}
+}
+
+.menu-group-caption {
+	font-size: $font-size-base;
+	font-style: italic;
+}
+
+.menu-price {
+	display: inline-block;
+	font-style: italic;
+}
+
+.menu-title {
+	font-size: $font-size-medium + 2;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-sm;
+	text-transform: uppercase;
+}

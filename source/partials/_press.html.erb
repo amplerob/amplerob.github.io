@@ -1,0 +1,36 @@
+<!-- grid -->
+<div class="card-grid">
+	<div class="row">
+		<% page_articles.each_with_index do |article, i| %>
+			<div class="press-card card">
+				<div class="card-wrapper">
+					<%= link_to image_tag(article.data.image, class:'img-responsive center-block', alt: article.data.alt), article %>
+					<h2><%= link_to article.title, article %></h2>
+					<%= article.summary(100) %>
+					<p class="press-source">&#183; <%= article.data.site %> &#183;</p>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<!-- pagination -->
+<% if paginate && num_pages > 1 %>
+	<div class="press-pagination">
+	  <ul class="page-nav list-inline text-center">
+	    <% if prev_page %>
+	      <li><%= link_to '<i class="fa fa-chevron-left fa-lg"></i>', prev_page %></li>
+	    <% else %>
+	      <li class="disabled"><i class="fa fa-chevron-left fa-lg"></i></li>
+	    <% end %>
+
+	    <li>Page <%= page_number %> of <%= num_pages %></li>
+
+	    <% if next_page %>
+	      <li><%= link_to '<i class="fa fa-chevron-right fa-lg"></i>', next_page %></li>
+	    <% else %>
+	      <li class="disabled"><i class="fa fa-chevron-right fa-lg"></i></li>
+	    <% end %>
+	  </ul>
+	</div>
+<% end %>

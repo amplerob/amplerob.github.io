@@ -1,0 +1,113 @@
+.header-global {
+  .navbar-default {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+
+    .navbar-nav {
+      margin-top: -145px;
+      padding: 0 $space-md;
+      background: image-url('navbar-bg.png') repeat-x;
+      width: 37.5%;
+
+      @media (max-width: $screen-sm-max) {
+        padding: 0 $space-xs;
+        width: 35%;
+      }
+      @media (max-width: $screen-xs-max) {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        width: auto;
+      }
+
+      li {
+        float: none;
+        display: inline-block;
+
+        @media (max-width: $screen-xs-max) {
+          display: block;
+        }
+
+        a {
+          padding: 8px 16px;
+          color: $black;
+
+          @media (max-width: $screen-sm-max) {
+            padding: 8px;
+          }
+          @media (max-width: $screen-xs-max) {
+            margin: 0;
+            padding: 12px;
+            border-top: 1px solid $border-color;
+
+            &:after,
+            &:before {
+              padding: 0 1em;
+              content: "★";
+              font-size: 7px;
+              vertical-align: 15%;
+            }
+          }
+
+          &.active,
+          &:focus,
+          &:hover {
+            @include border-radius(0);
+            background: transparent;
+            color: $red;
+          }
+        }
+      }
+    }
+
+    .navbar-collapse {
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .navbar-header {
+    padding: $space-sm 0;
+    width: 100%;
+
+    @media (max-width: $screen-xs-max) {
+      margin: 0;
+    }
+  }
+
+  .navbar-logo {
+    @include bg-image-retina('logo-header', png, 210px, 210px, 0, 0);
+    display: block;
+    width: 210px;
+    height: 210px;
+
+    @media (max-width: $screen-xs-max) {
+      @include bg-image-retina('logo-header', png, 150px, 150px, 0, 0);
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .navbar-right {
+    margin-right: 0;
+  }
+
+  .navbar-toggle {
+    margin: 50px 5px 0 0;
+    border: none;
+    @include border-radius(2px);
+    background: image-url('navbar-toggle-bg.png');
+    color: $tan;
+
+    &:focus, &:hover {
+      color: $white;
+    }
+
+    .fa-lg {
+      vertical-align: -25%;
+    }
+  }
+}
