@@ -30,21 +30,20 @@
   </head>
 
   <body class="<%= page_classes %>">
-
-
     <header class="header-global"  role="banner">
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <%= partial 'partials/header' %>
       </nav>
     </header>
-
     <main>
       <%= yield %>
     </main>
-
     <footer class="footer-global">
-      <%= partial 'partials/footer'  %>
+      <% if current_page.data.footerSimple %>
+        <%= partial 'partials/footer-simple'  %>
+      <% else %>
+        <%= partial 'partials/footer'  %>
+      <% end %>
     </footer>
-
   </body>
 </html>
