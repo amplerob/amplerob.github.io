@@ -22,6 +22,11 @@
   .card {
     .project-img {
       -webkit-filter: contrast(100%);
+      image-rendering: -moz-crisp-edges;         /* Firefox */
+      image-rendering:   -o-crisp-edges;         /* Opera */
+      image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+      image-rendering: crisp-edges;
+      -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
     }
     .thumbnail {
       box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0);

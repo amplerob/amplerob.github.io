@@ -1,7 +1,7 @@
 .project-detail main {
   .project-header {
     position: fixed;
-    top: 64px;
+    top: 57px;
     width: 100%;
 
     @media (min-width: $screen-sm-min) {
@@ -16,7 +16,7 @@
       line-height: 1.2em;
       margin-bottom: 0;
       padding: .95em 0 1em 15px;
-      text-align: left;
+      text-align: center;
       text-transform: uppercase;
 
       @media (min-width: $screen-sm-min) {
@@ -26,12 +26,15 @@
     }
 
     p {
-      letter-spacing: -.02em;
-      line-height: .8em;
-      margin: 65px 0 25px 15px;
+      letter-spacing: -.06em;
+      line-height: .9em;
+      margin: 35px 0 55px 15px;
       padding: .2em 0;
-      text-align: left;
-      text-transform: uppercase;
+      text-align: center;
+
+      small {
+        letter-spacing: -.04em;
+      }
     }
   }
 
@@ -59,7 +62,7 @@
       text-align: center;
       opacity: 0;
       background-color: rgba(255,255,255,.5);
-      transition: all 0.5s 0.4s ease;
+      transition: all 0.5s 0.6s ease;
     }
 
     figcaption h5 {
@@ -81,6 +84,11 @@
     .img-responsive {
       margin-bottom: 20px;
     }
+    .img-responsive {
+      @media (min-width: $screen-lg-min) {
+        max-width: none;
+      }
+    }
 	}
 
 	.project-topics {
@@ -99,7 +107,10 @@
     }
 
     p {
-      font-size: $font-size-sm;
+      font-size: 1.2em;
+      letter-spacing: -.02em;
+      line-height: 1.5em;
+      margin-bottom: 1em;
     }
 
     ul {
