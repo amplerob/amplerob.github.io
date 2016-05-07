@@ -18,4 +18,3 @@ gem 'font-awesome-sass'
 # Deploy
 # gem 'capistrano-middleman', require: false
 gem 'middleman-deploy', '~> 1.0'
-gem 'middleman-gh-pages'
