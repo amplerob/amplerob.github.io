@@ -161,9 +161,15 @@
       }
 
       .project-examples {
+
+        figcaption {
+          background: rgba($base-color-dark, 0.9);
+        }
         figcaption h5 {
-          background-color: $base-color-light;
-          color: $text-color;
+          //background-color: $base-color-light;
+          //color: $text-color;
+          background-color: $base-color-darker;
+          color: $white;
         }
       }
 
