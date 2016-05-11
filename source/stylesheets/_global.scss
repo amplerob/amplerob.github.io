@@ -35,7 +35,7 @@ h1 {
   font-size: $font-size-h1;
   line-height: .85;
   letter-spacing: -0.06em;
-  margin: .6em 0 .4em 0;
+  margin: .6em 0;
   text-align: center;
 
   @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
@@ -76,6 +76,9 @@ hr {
     color: transparent;
 
     &.spacer-lg {
+      margin: $space-md 0;
+    }
+    &.spacer-md {
       margin: $space-md 0;
     }
     &.spacer-xs {

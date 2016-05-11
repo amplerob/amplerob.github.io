@@ -1,8 +1,8 @@
-// .container {
-//   @media (max-width: $screen-xs-max) {
-//     padding: 0 $gutter/4;
-//   }
-// }
+.container {
+  @media (max-width: $screen-xs-max) {
+    padding: 0 15px;
+  }
+}
 
 .container-bleed {
   @extend .container-fluid;
