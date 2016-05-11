@@ -16,6 +16,12 @@ sloanDigital:
   categories:
     - Identity
   home: true
+rohs-street:
+  title: Rohs Street Cafe
+  name: rohs-street-cafe
+  categories:
+    - Identity
+  home: true
 hickory-docks:
   title: Hickory Docks
   name: hickory-docks
@@ -23,10 +29,4 @@ hickory-docks:
     - Naming
     - Identity
     - Product
-  home: true
-rohs-street:
-  title: Rohs Street Cafe
-  name: rohs-street-cafe
-  categories:
-    - Identity
   home: true
