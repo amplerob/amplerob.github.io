@@ -4,4 +4,4 @@ build
 tmp/*
 source/downloads
 .bundle
-CNAME
+build/CNAME

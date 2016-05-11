@@ -24,3 +24,9 @@ hickory-docks:
     - Identity
     - Product
   home: true
+rohs-street:
+  title: Rohs Street Cafe
+  name: rohs-street-cafe
+  categories:
+    - Identity
+  home: true
