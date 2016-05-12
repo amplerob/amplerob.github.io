@@ -25,17 +25,10 @@
   .card {
     .project-img {
       -webkit-filter: contrast(100%);
-      image-rendering: -moz-crisp-edges;         /* Firefox */
-      image-rendering:   -o-crisp-edges;         /* Opera */
-      image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-      image-rendering: crisp-edges;
-      -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
     }
     .thumbnail {
       box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0);
-
       @include animate(border-bottom-color, .5s, .05s);
-      @include animate(box-shadow, .5s, .05s);
 
       .caption {
         @include animate(margin, .2s, 0s);
@@ -46,18 +39,13 @@
       }
     }
     &:hover {
-      .project-img {
-        -webkit-filter: contrast(130%);
-      }
-
-      .thumbnail {
-        box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.1);
-    	}
       .thumbnail .caption {
         margin: 5px 0;
     	}
+
       .thumbnail .project-img {
         margin-top: -10px;
+        -webkit-filter: contrast(130%);
     	}
     }
   }
