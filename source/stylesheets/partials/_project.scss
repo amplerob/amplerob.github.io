@@ -36,6 +36,14 @@
 
       @include animate(border-bottom-color, .5s, .05s);
       @include animate(box-shadow, .5s, .05s);
+
+      .caption {
+        @include animate(margin, .2s, 0s);
+      }
+
+      .project-img {
+        @include animate(margin-top, .2s, 0s);
+      }
     }
     &:hover {
       .project-img {
@@ -44,6 +52,12 @@
 
       .thumbnail {
         box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.1);
+    	}
+      .thumbnail .caption {
+        margin: 5px 0;
+    	}
+      .thumbnail .project-img {
+        margin-top: -10px;
     	}
     }
   }
