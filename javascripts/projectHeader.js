@@ -1,1 +1,1 @@
-var projectHeader=function(){jQuery("#responsive_headline").fitText(1.1);var e=document.getElementById("project-header").offsetHeight;document.getElementById("project-content").style.marginTop=e+65+"px"};
+var projectHeader=function(){jQuery("#responsive_headline").fitText(document.documentElement.clientWidth>767?1.1:.6);var e=document.getElementById("project-header").offsetHeight;document.getElementById("project-content").style.marginTop=e+65+"px"};
