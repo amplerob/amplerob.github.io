@@ -8,25 +8,34 @@ three-goats:
   title: 3 Goats
   name: three-goats
   categories:
-    - Identity
+    - Logo
+    - Branding
   home: true
 sloanDigital:
   title: Sloan Digital
   name: sloan-digital
   categories:
-    - Identity
+    - Logo
   home: true
 rohs-street:
   title: Rohs Street Cafe
   name: rohs-street-cafe
   categories:
-    - Identity
+    - Logo
+  home: true
+whittle-hone:
+  title: Whittle + Hone
+  name: whittle-hone
+  categories:
+    - Naming
+    - Logo
+    - Branding
   home: true
 hickory-docks:
   title: Hickory Docks
   name: hickory-docks
   categories:
     - Naming
-    - Identity
+    - Logo
     - Product
   home: true
