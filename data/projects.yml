@@ -11,11 +11,11 @@ three-goats:
     - Logo
     - Branding
   home: true
-sloanDigital:
-  title: Sloan Digital
-  name: sloan-digital
+bakersfield:
+  title: Bakersfield
+  name: bakersfield
   categories:
-    - Logo
+    - Website
   home: true
 rohs-street:
   title: Rohs Street Cafe
@@ -30,6 +30,18 @@ whittle-hone:
     - Naming
     - Logo
     - Branding
+  home: true
+eagle:
+  title: The Eagle
+  name: eagle
+  categories:
+    - Website
+  home: true
+sloanDigital:
+  title: Sloan Digital
+  name: sloan-digital
+  categories:
+    - Logo
   home: true
 hickory-docks:
   title: Hickory Docks

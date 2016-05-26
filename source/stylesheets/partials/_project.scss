@@ -1,6 +1,8 @@
 /* Project builder
 ------------------------------------------------------------------------------*/
 // (project name, bg color, header color)
+@include project('bakersfield', #b0a5a2, #bd382e);
+@include project('eagle', #988b7d, #2e2c2a);
 @include project('family-crest', #8fd6ba, #29b77f);
 @include project('hickory-docks', #8acab9, #1BAE84);
 @include project('rohs-street-cafe', #dfdbd9, #4d433d);
