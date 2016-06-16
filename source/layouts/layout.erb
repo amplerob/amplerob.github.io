@@ -9,7 +9,6 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title><%= "Rob Sloan is rsloan39 • Digital design, UX and graphic design from Cincinnati, Ohio to Bend, Oregon" %></title>
-    <meta name="keywords" content="<% current_page.data.metaKeywords %>" />
     <meta name="description" content="<%= current_page.data.metaDescription %>" />
     <meta name="author" content="Rob Sloan http://rsloan39.com/" />
 
@@ -35,10 +34,10 @@
         <%= partial 'partials/header' %>
       </nav>
     </header>
-    <main>
+    <main role="main">
       <%= yield %>
     </main>
-    <footer class="footer-global">
+    <footer class="footer-global" role="contentinfo">
       <% if current_page.data.footerSimple %>
         <%= partial 'partials/footer-simple'  %>
       <% else %>

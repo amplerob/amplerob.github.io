@@ -156,7 +156,7 @@
     background-color: $base-color;
 
     main {
-      .project-content {
+      #project-content {
         background-color: rgba($base-color, 1);
       }
 
@@ -173,7 +173,7 @@
         }
       }
 
-      .project-header {
+      #project-header {
         @include gradient-vertical($header-color, darken($header-color, 3%), 0%, 80%);
         h1 {
           background-color: darken($header-color, 6%);

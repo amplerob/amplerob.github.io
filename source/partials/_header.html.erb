@@ -17,9 +17,9 @@
 
 <div class="container-bleed">
   <div class="navbar-header">
-    <%= link_to "<em>r</em>ob <em>sloan 39</em>", '/', class: 'navbar-brand' %>
+    <%= link_to "<em>r</em>ob <em>sloan 39</em>", '/', class: 'navbar-brand', title:"Back to Home" %>
   </div>
   <ul class="nav navbar-nav navbar-right">
-    <li><a href="/" class="<%= 'active' if current_page.path == /^projects/ || current_page.path =~ /^index/ %>">Projects</a></li>
+    <li><a href="/" class="<%= 'active' if current_page.path == /^projects/ || current_page.path =~ /^index/ %>" title="All Projects">Projects</a></li>
   </ul>
 </div>
